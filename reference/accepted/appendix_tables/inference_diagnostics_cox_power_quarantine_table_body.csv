@@ -1,0 +1,4 @@
+Family,Model,Estimator,Moderator,Rows removed,Type-I@0,Raw power@beta,Calibration status,Quarantine reason,Citable status,Source
+H1,M4,Cox PH (counting-process),(none — H1 unconditional curvilinear),2,0.222,0.992,DEGENERATE_FIT,invalid_counting_process_dgp,Quarantined; not citable,power_h1_summary.csv
+H2.1,M7,Cox PH,domaut_c,1,0.104,0.988,INFLATED_TYPE1,invalid_counting_process_dgp,Quarantined; not citable,power_h21_summary.csv
+H2.1,M8,Cox PH,stterr_c,1,0.150,0.816,INFLATED_TYPE1,invalid_counting_process_dgp,Quarantined; not citable,power_h21_summary.csv

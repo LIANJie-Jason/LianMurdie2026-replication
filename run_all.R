@@ -1,0 +1,8 @@
+args_all <- commandArgs(trailingOnly = FALSE)
+file_arg <- grep("^--file=", args_all, value = TRUE)
+if (!length(file_arg)) stop("Run this file with Rscript", call. = FALSE)
+entry_path <- sub("^--file=", "", file_arg[[1L]])
+entry_path <- gsub("~+~", " ", entry_path, fixed = TRUE)
+root <- normalizePath(dirname(entry_path), mustWork = TRUE)
+Sys.setenv(REPLICATION_ROOT = root)
+source(file.path(root, "code", "R", "00_run_all.R"), chdir = FALSE)

@@ -1,0 +1,11 @@
+.DS_Store
+**/.DS_Store
+
+# Runtime-only intermediates and logs
+output/cache/
+audit/logs/
+audit/.pipeline.lock/
+
+# Optional stochastic development outputs
+output/**/*_smoke*
+output/**/*_recomputed*

@@ -1,0 +1,290 @@
+"Model","Estimator","DV","Moderator","Variable","Estimate","SE","p","CI_lo","CI_hi","N","Converged","Fit_Status"
+"NVH1","Firth PML","concession (nonviolent)","English share squared","(Intercept)",-5.89700959661474,3.25939932487286,0.0660206995440655,-13.0681397558266,0.380904937187836,87,,
+"NVH1","Firth PML","concession (nonviolent)","English share squared","eng_c",-2.10543889142367,8.0233364972375,0.795691634812673,-18.4222885889447,13.8805784360807,87,,
+"NVH1","Firth PML","concession (nonviolent)","English share squared","I(eng_c^2)",-173.978852683442,218.751897301939,0.429074950524523,-628.889053969726,257.30552856678,87,,
+"NVH1","Firth PML","concession (nonviolent)","English share squared","REGCHANGE",2.37223027757097,1.46899872162813,0.0541298419414906,-0.0367527257893844,7.28503968429687,87,,
+"NVH1","Firth PML","concession (nonviolent)","English share squared","v2csreprss",0.575703214677269,0.220868125783639,0.0064356586074924,0.155461300517044,1.05399153641267,87,,
+"NVH1","Firth PML","concession (nonviolent)","English share squared","lnlengthofcam",-0.142516498127949,0.420597866951541,0.739169580115593,-1.00656179385256,0.696326702982056,87,,
+"NVH1","Firth PML","concession (nonviolent)","English share squared","lnnum_image_sum",-0.122050695556562,0.228990560956701,0.601771060307044,-0.588192041710475,0.340067753973164,87,,
+"NVH1","Firth PML","concession (nonviolent)","English share squared","lnpop",0.242162282876014,0.162245304021008,0.139157813441554,-0.0785369381655494,0.579108711564289,87,,
+"NVH1","Firth PML","concession (nonviolent)","English share squared","colonized_english1",1.03954990390215,0.654981720224181,0.106556028469257,-0.218633355625376,2.42101259535928,87,,
+"NV1","Firth PML","concession (nonviolent)","domaut","(Intercept)",-1.94394872208818,1.86775319885203,0.274938200311489,-7.31453910914222,1.36806617138191,88,,
+"NV1","Firth PML","concession (nonviolent)","domaut","eng_c",-2.93798346712399,8.23036266213048,0.724371909076851,-19.7770235139728,13.5169203774854,88,,
+"NV1","Firth PML","concession (nonviolent)","domaut","domaut_c",-0.222538243503706,0.302836651819566,0.470664467375891,-0.847072793042337,0.383967244903193,88,,
+"NV1","Firth PML","concession (nonviolent)","domaut","REGCHANGE",1.80943837905724,1.4284265432405,0.140133474398477,-0.494870464357219,6.71322072396842,88,,
+"NV1","Firth PML","concession (nonviolent)","domaut","v2csreprss",0.404108046016167,0.19758948366378,0.0389528350772902,0.0201219471869903,0.824708888430752,88,,
+"NV1","Firth PML","concession (nonviolent)","domaut","lnlengthofcam",-0.281173351021129,0.411831076882191,0.501363054368874,-1.12494576456966,0.54045925862131,88,,
+"NV1","Firth PML","concession (nonviolent)","domaut","lnnum_image_sum",0.0116872950992296,0.216388272324058,0.95768095995719,-0.421721707983519,0.450958939374771,88,,
+"NV1","Firth PML","concession (nonviolent)","domaut","eng_c:domaut_c",6.44406123299882,11.7503385882118,0.592916075147757,-17.4019033895146,30.7131916587167,88,,
+"NV2","Firth PML","concession (nonviolent)","stterr","(Intercept)",-2.24515595338248,1.89204461004588,0.213027924156406,-7.610554064117,1.14992927987971,88,,
+"NV2","Firth PML","concession (nonviolent)","stterr","eng_c",-1.08409069580777,8.54873857862295,0.900712612658479,-18.4231277943716,16.1695406548963,88,,
+"NV2","Firth PML","concession (nonviolent)","stterr","stterr_c",-0.0339461720590312,0.026728383636797,0.207246037948312,-0.0908883357964167,0.0186708832706201,88,,
+"NV2","Firth PML","concession (nonviolent)","stterr","REGCHANGE",2.03071795737897,1.46648459138517,0.106525815593718,-0.362581824710409,6.9707703222954,88,,
+"NV2","Firth PML","concession (nonviolent)","stterr","v2csreprss",0.427236104206227,0.202301363561569,0.0324448220372475,0.0349080874060353,0.858657199006062,88,,
+"NV2","Firth PML","concession (nonviolent)","stterr","lnlengthofcam",-0.247156625699242,0.425111113959732,0.567025489714348,-1.12036699409032,0.597932547337691,88,,
+"NV2","Firth PML","concession (nonviolent)","stterr","lnnum_image_sum",0.0370842559725494,0.216190915944807,0.866037659446787,-0.394404675664572,0.476939168773199,88,,
+"NV2","Firth PML","concession (nonviolent)","stterr","eng_c:stterr_c",-0.165164839480871,1.02568023979322,0.875776815384103,-2.28131356828197,1.93714720216418,88,,
+"NV3","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","domaut","(Intercept)",-2.98420737696866,2.29264171587829,0.196173911722125,-8.38052120588601,1.4481863449461,50,,
+"NV3","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","domaut","eng_c",10.348234159999,9.93857616376252,0.314158244201358,-9.78744342429799,33.1479753950164,50,,
+"NV3","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","domaut","domaut_c",-1.08936271438417,0.553484108102558,0.0471749288728662,-2.3784161634531,-0.0132162658990493,50,,
+"NV3","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","domaut","REGCHANGE",0.835406487997813,0.995036552913377,0.402076489404023,-1.03971449231807,3.28992562480602,50,,
+"NV3","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","domaut","v2csreprss",0.805266598791769,0.390064392019731,0.0306218426967894,0.0688679655010798,1.73203906763638,50,,
+"NV3","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","domaut","time_in_campaign",0.0179663358442264,0.416142599308679,0.968107323668366,-0.960151200328494,0.887719288069112,50,,
+"NV3","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","domaut","lnnum_image_sum",0.272606188094318,0.385419493774266,0.498055760686939,-0.51366495717365,1.13430055105646,50,,
+"NV3","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","domaut","eng_c:domaut_c",7.10700426082982,12.5917539222158,0.586947810305144,-20.1506071858203,33.1485702526263,50,,
+"NV3_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","domaut","(Intercept)",-4.28586539841926,2.72411051900529,0.115647473143739,-9.62512201566963,1.05339121883111,50,TRUE,"reported"
+"NV3_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","domaut","eng_c",16.7237265477941,13.4706475182813,0.214423355019195,-9.67874258803722,43.1261956836254,50,TRUE,"reported"
+"NV3_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","domaut","domaut_c",-1.37693105186817,0.600273974547677,0.0217998250718789,-2.55346804198162,-0.200394061754723,50,TRUE,"reported"
+"NV3_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","domaut","REGCHANGE",1.45313954869516,1.18809017104738,0.221296232416619,-0.875517186557696,3.78179628394802,50,TRUE,"reported"
+"NV3_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","domaut","v2csreprss",1.00715506675371,0.436262309283671,0.0209658007426284,0.152080940557718,1.86222919294971,50,TRUE,"reported"
+"NV3_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","domaut","time_in_campaign",0.0450516026076487,0.443198685136042,0.919033673525648,-0.823617820258994,0.913721025474291,50,TRUE,"reported"
+"NV3_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","domaut","lnnum_image_sum",0.384558016921982,0.401271211943787,0.337886611782247,-0.40193355848784,1.1710495923318,50,TRUE,"reported"
+"NV3_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","domaut","eng_c:domaut_c",6.11636160279707,18.5808308914852,0.742022743035558,-30.302066944514,42.5347901501081,50,TRUE,"reported"
+"NV4","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","stterr","(Intercept)",-1.57764123982303,2.04724157963932,0.455165013952159,-6.04254523966909,2.54221435940804,50,,
+"NV4","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","stterr","eng_c",11.219224785832,10.8373337884576,0.30533577683982,-10.3687301470656,34.5340361094725,50,,
+"NV4","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","stterr","stterr_c",-0.0541367246865691,0.0417397991881722,0.192012325194189,-0.144747362878711,0.0269982629623509,50,,
+"NV4","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","stterr","REGCHANGE",0.699254337413557,0.987351810749768,0.479646362886036,-1.16353759573648,3.11939159099188,50,,
+"NV4","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","stterr","v2csreprss",0.410197179173398,0.324966731516593,0.204873173486793,-0.216148876939715,1.14016204247044,50,,
+"NV4","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","stterr","time_in_campaign",-0.0840643268071321,0.381216939049216,0.834446662187298,-0.996629638399148,0.670107155977497,50,,
+"NV4","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","stterr","lnnum_image_sum",0.0836025537425622,0.343557685854001,0.814215031196833,-0.629416898210172,0.801582597342113,50,,
+"NV4","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","stterr","eng_c:stterr_c",-0.342165151782995,1.11157309067948,0.761082296638555,-2.78495111470439,1.8255451313103,50,,
+"NV4_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","stterr","(Intercept)",-2.37077557113678,2.16867238530556,0.274309454362196,-6.62137344633568,1.87982230406211,50,TRUE,"reported"
+"NV4_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","stterr","eng_c",15.9163245317305,12.6705719657991,0.209056282314964,-8.91799652123562,40.7506455846967,50,TRUE,"reported"
+"NV4_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","stterr","stterr_c",-0.0671266895805737,0.0507599730630729,0.186023834874503,-0.166616236784197,0.0323628576230493,50,TRUE,"reported"
+"NV4_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","stterr","REGCHANGE",1.12575190101515,0.980318772526253,0.250822910952464,-0.795672893136308,3.0471766951666,50,TRUE,"reported"
+"NV4_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","stterr","v2csreprss",0.550278732148826,0.402130979952598,0.171184804398813,-0.237897988558267,1.33845545285592,50,TRUE,"reported"
+"NV4_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","stterr","time_in_campaign",-0.0193699419009017,0.332450410331373,0.953538219961678,-0.670972746150392,0.632232862348588,50,TRUE,"reported"
+"NV4_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","stterr","lnnum_image_sum",0.123569175087964,0.403815428479878,0.759601527228728,-0.667909064732596,0.915047414908525,50,TRUE,"reported"
+"NV4_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","stterr","eng_c:stterr_c",-0.288358754497695,1.18790322445406,0.808202171213328,-2.61664907442766,2.03993156543227,50,TRUE,"reported"
+"NV5","Firth PML","concession (nonviolent)","FDI inflow","(Intercept)",-0.337194589525414,3.92985699762924,0.933232989966461,-8.58635918671665,7.56009651289507,85,,
+"NV5","Firth PML","concession (nonviolent)","FDI inflow","eng_c",-4.16641687763239,8.68749893547343,0.64135527208606,-21.9930461643922,13.6836476775796,85,,
+"NV5","Firth PML","concession (nonviolent)","FDI inflow","fdiin_c",-0.162165846960356,0.0805388631696348,0.0302138099819145,-0.393548791281819,-0.0141997209511286,85,,
+"NV5","Firth PML","concession (nonviolent)","FDI inflow","goalsREGCHANGE",1.75002892479661,1.62829130395213,0.241590257652649,-1.07031087473721,6.79448183980537,85,,
+"NV5","Firth PML","concession (nonviolent)","FDI inflow","goalsSECESSION",0.304306605976295,2.28617938802795,0.899010189181329,-5.37403153009245,5.93727672710189,85,,
+"NV5","Firth PML","concession (nonviolent)","FDI inflow","v2csreprss",0.561354192804666,0.223100306156975,0.00961520040946995,0.132540687231747,1.04730468385974,85,,
+"NV5","Firth PML","concession (nonviolent)","FDI inflow","lngdp",-0.27417378074829,0.258911997140988,0.303281102485251,-0.812371499217557,0.254962058612721,85,,
+"NV5","Firth PML","concession (nonviolent)","FDI inflow","lnpop",0.0420588218328863,0.183219881034576,0.829591945440759,-0.380021480497662,0.41281838713992,85,,
+"NV5","Firth PML","concession (nonviolent)","FDI inflow","colonized_english1",1.07474298230346,0.692792856941725,0.116908768099593,-0.263811333691456,2.55119940975914,85,,
+"NV5","Firth PML","concession (nonviolent)","FDI inflow","lnlengthofcam",-0.0508335484591113,0.422302458029679,0.90750535322202,-0.932680329328264,0.809168612305374,85,,
+"NV5","Firth PML","concession (nonviolent)","FDI inflow","lnnum_image_sum",-0.0381291105840126,0.25603548306845,0.886035292587645,-0.558304567265592,0.499980170300558,85,,
+"NV5","Firth PML","concession (nonviolent)","FDI inflow","eng_c:fdiin_c",-1.34997829647054,2.46356630561483,0.595505810777392,-8.65954342747514,3.23598303915169,85,,
+"NV9","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","FDI inflow","(Intercept)",-1.34416904479583,3.52741390012521,0.710616322152554,-8.68547605008311,5.84625799229228,49,,
+"NV9","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","FDI inflow","eng_c",9.39242414373895,9.47594977971466,0.338403498462244,-10.0290619595743,29.6536309189792,49,,
+"NV9","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","FDI inflow","fdiin_c",0.0145057170690406,0.0803878655492207,0.860613284535662,-0.168764016264423,0.174411432092467,49,,
+"NV9","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","FDI inflow","REGCHANGE",1.01014947073605,0.96881900076432,0.284401139444758,-0.767064661112067,3.43803910854874,49,,
+"NV9","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","FDI inflow","v2csreprss",0.377495701097137,0.330066965774705,0.25292766236564,-0.262019725613662,1.12369749907931,49,,
+"NV9","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","FDI inflow","lngdp_yr",-0.11555204244184,0.401833693186542,0.780433454087917,-0.966941999198455,0.695754907614309,49,,
+"NV9","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","FDI inflow","time_in_campaign",-0.155649033025244,0.389812820511031,0.704569224007683,-1.07282703660981,0.629295575854968,49,,
+"NV9","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","FDI inflow","lnnum_image_sum",0.148266585600265,0.373581233980229,0.700920893033519,-0.607244941234978,0.965255387100729,49,,
+"NV9","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","FDI inflow","eng_c:fdiin_c",-0.928246911992385,1.94704202926574,0.649049460053996,-5.00551092752922,3.39305165935823,49,,
+"NV9_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","FDI inflow","(Intercept)",-1.6265800679387,4.08825619109066,0.690728615526203,-9.63956220247638,6.38640206659899,49,TRUE,"reported"
+"NV9_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","FDI inflow","eng_c",15.4112645581833,8.94657196849285,0.0849629140954393,-2.1240165000627,32.9465456164293,49,TRUE,"reported"
+"NV9_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","FDI inflow","fdiin_c",0.0321986458267942,0.0972321982614148,0.740529605787505,-0.158376462765579,0.222773754419167,49,TRUE,"reported"
+"NV9_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","FDI inflow","REGCHANGE",1.36619443676665,1.01379789526258,0.17778694581006,-0.620849437948012,3.35323831148132,49,TRUE,"reported"
+"NV9_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","FDI inflow","v2csreprss",0.532482734305583,0.39132708570905,0.173605308305341,-0.234518353684154,1.29948382229532,49,TRUE,"reported"
+"NV9_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","FDI inflow","lngdp_yr",-0.257242607105482,0.550353448881025,0.640204097854708,-1.33593536691229,0.821450152701327,49,TRUE,"reported"
+"NV9_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","FDI inflow","time_in_campaign",-0.0525202011856511,0.337393304683625,0.876297384843622,-0.713811078365555,0.608770675994253,49,TRUE,"reported"
+"NV9_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","FDI inflow","lnnum_image_sum",0.300017335273622,0.418081022715878,0.473000426877224,-0.5194214692495,1.11945613979674,49,TRUE,"reported"
+"NV9_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","FDI inflow","eng_c:fdiin_c",-1.17856105619287,1.38648969248497,0.395307115049545,-3.89608085346342,1.53895874107767,49,TRUE,"reported"
+"NV6","Firth PML","concession (nonviolent)","Trade openness","(Intercept)",-2.75815709071622,3.98311112654943,0.50059028531884,-11.2463920723693,5.27378806307007,80,,
+"NV6","Firth PML","concession (nonviolent)","Trade openness","eng_c",-9.46648767297012,9.91399330945844,0.346630580391169,-30.3623613750637,10.1782252254035,80,,
+"NV6","Firth PML","concession (nonviolent)","Trade openness","trade_c",-0.453086851596436,0.257787990444402,0.0759995433997166,-1.02951232358383,0.0459184923839162,80,,
+"NV6","Firth PML","concession (nonviolent)","Trade openness","goalsREGCHANGE",0.656695358896734,1.65617976949636,0.68493235785273,-2.24317552518157,5.69869339916369,80,,
+"NV6","Firth PML","concession (nonviolent)","Trade openness","goalsSECESSION",-0.383943116569633,2.25873207349428,0.870330615822221,-6.03012441508493,5.19152401536258,80,,
+"NV6","Firth PML","concession (nonviolent)","Trade openness","v2csreprss",0.789611117166863,0.279289870463789,0.00271448429652865,0.258483969189924,1.4321827031569,80,,
+"NV6","Firth PML","concession (nonviolent)","Trade openness","lngdp",-0.061990953401556,0.284879070748606,0.834560504712756,-0.639979025478433,0.539353326118232,80,,
+"NV6","Firth PML","concession (nonviolent)","Trade openness","lnpop",0.0630654326454979,0.215099831676228,0.78363736373743,-0.411123445156459,0.50517508446682,80,,
+"NV6","Firth PML","concession (nonviolent)","Trade openness","colonized_english1",0.773291782441077,0.857817569125335,0.382114425768124,-0.998968703673837,2.5563891228217,80,,
+"NV6","Firth PML","concession (nonviolent)","Trade openness","lnlengthofcam",-0.304481193071682,0.463990581941253,0.532192844520055,-1.29740997334779,0.651355810115053,80,,
+"NV6","Firth PML","concession (nonviolent)","Trade openness","lnnum_image_sum",0.229716526144434,0.270598687557322,0.410764551546203,-0.311152735318033,0.822284346432281,80,,
+"NV6","Firth PML","concession (nonviolent)","Trade openness","eng_c:trade_c",19.2102631396558,9.66340905496397,0.0416137017402279,0.701650405007624,41.0314639139212,80,,
+"NV10","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Trade openness","(Intercept)",0.319029595624564,3.90886531593933,0.937117411284374,-7.78906749021251,8.4955659398932,47,,
+"NV10","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Trade openness","eng_c",10.8929362958356,12.638857830536,0.422002838699819,-14.9775336115549,42.4415432769106,47,,
+"NV10","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Trade openness","trade_c",1.11861981764696,0.524458059602217,0.0305817700732687,0.094541008752154,2.42850678804149,47,,
+"NV10","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Trade openness","REGCHANGE",1.84922204325593,1.14265592142758,0.100814108126876,-0.315862640092573,4.69183398100144,47,,
+"NV10","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Trade openness","v2csreprss",0.240971637895793,0.385480276620741,0.54632199545584,-0.544152691049053,1.1064784314529,47,,
+"NV10","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Trade openness","lngdp_yr",-0.732893480835034,0.545877518164686,0.196849858353639,-2.01718875387529,0.362960550214428,47,,
+"NV10","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Trade openness","time_in_campaign",0.267337270106758,0.463221209468197,0.600301073896798,-0.746650339922765,1.38117675936701,47,,
+"NV10","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Trade openness","lnnum_image_sum",0.496984923123778,0.413462689055315,0.247783145113027,-0.328615371449204,1.51803391536305,47,,
+"NV10","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Trade openness","eng_c:trade_c",6.26821890068023,10.5545407207685,0.573688306246275,-15.7754260632629,30.7720836239658,47,,
+"NV10_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Trade openness","(Intercept)",0.13338243859698,4.94778915916123,0.978493242913294,-9.56428431335903,9.83104919055299,47,TRUE,"reported"
+"NV10_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Trade openness","eng_c",16.8468011812805,16.940270849061,0.319988070542514,-16.3561296828791,50.0497320454401,47,TRUE,"reported"
+"NV10_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Trade openness","trade_c",1.58809230982574,0.750113260700345,0.0342482481600769,0.117870318853063,3.05831430079841,47,TRUE,"reported"
+"NV10_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Trade openness","REGCHANGE",2.80304727930994,1.56390977250791,0.0730796212440399,-0.262215874805564,5.86831043342545,47,TRUE,"reported"
+"NV10_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Trade openness","v2csreprss",0.395908412206092,0.554900467686124,0.47555098474621,-0.69169650445871,1.48351332887089,47,TRUE,"reported"
+"NV10_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Trade openness","lngdp_yr",-1.04854863777944,0.573336807443683,0.067421659533788,-2.17228878036906,0.0751915048101763,47,TRUE,"reported"
+"NV10_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Trade openness","time_in_campaign",0.414047708215301,0.438021311328555,0.344521862108392,-0.444474061988666,1.27256947841927,47,TRUE,"reported"
+"NV10_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Trade openness","lnnum_image_sum",0.754260898759006,0.49590631510548,0.128266216818772,-0.217715478847734,1.72623727636575,47,TRUE,"reported"
+"NV10_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Trade openness","eng_c:trade_c",10.5414313148917,13.9734511757513,0.450615096695895,-16.8465329895809,37.9293956193642,47,TRUE,"reported"
+"NV7","Firth PML","concession (nonviolent)","ln(Aid)","(Intercept)",-3.75731799902108,3.75797555814646,0.324076242324014,-11.9722476807939,3.68237876426943,36,,
+"NV7","Firth PML","concession (nonviolent)","ln(Aid)","eng_c",-4.49633170118495,11.2865832527899,0.703256481540175,-28.7056036759912,19.109321248579,36,,
+"NV7","Firth PML","concession (nonviolent)","ln(Aid)","lnaid_c",0.565233478364396,0.342232619379583,0.0813491888842155,-0.0659272326567606,1.39872388236708,36,,
+"NV7","Firth PML","concession (nonviolent)","ln(Aid)","REGCHANGE",3.17784606290438,1.88486750764204,0.0681160362195624,-0.218353438342865,8.48125826487782,36,,
+"NV7","Firth PML","concession (nonviolent)","ln(Aid)","v2csreprss",0.186389470238853,0.380427532054365,0.637092540958165,-0.603096466484537,1.01332571270994,36,,
+"NV7","Firth PML","concession (nonviolent)","ln(Aid)","lngdp",0.229275644900686,0.442887245142667,0.614406355298949,-0.665078762755947,1.19510175157321,36,,
+"NV7","Firth PML","concession (nonviolent)","ln(Aid)","lnlengthofcam",-0.211750060158398,0.649799401352212,0.752648286352,-1.59529951694842,1.15751177911701,36,,
+"NV7","Firth PML","concession (nonviolent)","ln(Aid)","lnnum_image_sum",-0.102665352308189,0.441262515436599,0.821336559418504,-1.05918448589901,0.796934464799403,36,,
+"NV7","Firth PML","concession (nonviolent)","ln(Aid)","eng_c:lnaid_c",12.8431066602769,10.1634704427351,0.207566395233343,-7.06684904276584,35.9400974691325,36,,
+"NV11","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","ln(Aid)","(Intercept)",-0.0901729804095718,3.83125808997009,0.982458171534383,-8.28659410587229,12.5026475299137,44,,
+"NV11","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","ln(Aid)","eng_c",4.02824880427771,10.7972821131414,0.739811444888949,-21.9702854254119,36.0998318542799,44,,
+"NV11","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","ln(Aid)","lnaid_c",0.396101619119513,0.310614067486387,0.213601638975705,-0.213982630559401,1.65854157774389,44,,
+"NV11","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","ln(Aid)","REGCHANGE",1.43450738788939,1.36134885092477,0.512158244036308,-1.84904599933736,5.43100049040676,44,,
+"NV11","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","ln(Aid)","v2csreprss",0.454619050058186,0.379838884754707,0.262815488837132,-0.351197619536665,1.3478483456709,44,,
+"NV11","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","ln(Aid)","lngdp_yr",-0.406567469631223,0.49735718537871,0.434085376769397,-2.06592464116483,0.61442615448525,44,,
+"NV11","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","ln(Aid)","time_in_campaign",-0.136123894107259,0.467997264294236,0.790602800445755,-1.29315303516839,1.21037408983587,44,,
+"NV11","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","ln(Aid)","lnnum_image_sum",0.242707372507865,0.467162487499907,0.627628059128923,-0.754249678916266,1.32679118522055,44,,
+"NV11","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","ln(Aid)","eng_c:lnaid_c",8.33202687423967,7.71339969603745,0.856848593910765,-28.6988235838006,27.9980612611173,44,,
+"NV11_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","ln(Aid)","(Intercept)",,,,,,44,FALSE,"gee_error_not_reported"
+"NV11_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","ln(Aid)","eng_c",,,,,,44,FALSE,"gee_error_not_reported"
+"NV11_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","ln(Aid)","lnaid_c",,,,,,44,FALSE,"gee_error_not_reported"
+"NV11_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","ln(Aid)","REGCHANGE",,,,,,44,FALSE,"gee_error_not_reported"
+"NV11_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","ln(Aid)","v2csreprss",,,,,,44,FALSE,"gee_error_not_reported"
+"NV11_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","ln(Aid)","lngdp_yr",,,,,,44,FALSE,"gee_error_not_reported"
+"NV11_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","ln(Aid)","time_in_campaign",,,,,,44,FALSE,"gee_error_not_reported"
+"NV11_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","ln(Aid)","lnnum_image_sum",,,,,,44,FALSE,"gee_error_not_reported"
+"NV11_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","ln(Aid)","eng_c:lnaid_c",,,,,,44,FALSE,"gee_error_not_reported"
+"NV8","Firth PML","concession (nonviolent)","IO donor count","(Intercept)",-1.47569037617917,4.37376791651213,0.746960994326981,-10.901455398084,7.60754787492261,36,,
+"NV8","Firth PML","concession (nonviolent)","IO donor count","eng_c",-3.41397553112616,11.9688492007521,0.791609442948813,-30.3020791060148,22.526376215022,36,,
+"NV8","Firth PML","concession (nonviolent)","IO donor count","iodonor_c",0.0228538192424512,0.124543264806777,0.857229566400766,-0.230518183346134,0.291438217500952,36,,
+"NV8","Firth PML","concession (nonviolent)","IO donor count","REGCHANGE",1.17663976636317,1.6003709509622,0.455766895735163,-1.76671416875532,6.31513098858938,36,,
+"NV8","Firth PML","concession (nonviolent)","IO donor count","v2csreprss",0.52910548161803,0.372965680083702,0.160535214549054,-0.205225654131823,1.39045038340619,36,,
+"NV8","Firth PML","concession (nonviolent)","IO donor count","lngdp",-0.127886231376601,0.518613374756494,0.811824636208368,-1.21793067179226,0.959957954554159,36,,
+"NV8","Firth PML","concession (nonviolent)","IO donor count","lnlengthofcam",-0.700711863371781,0.680899135625383,0.343261876476575,-2.42244161284463,0.734100598504317,36,,
+"NV8","Firth PML","concession (nonviolent)","IO donor count","lnnum_image_sum",0.410023039424146,0.382768488098471,0.289001740773741,-0.340821379236307,1.26717654222211,36,,
+"NV8","Firth PML","concession (nonviolent)","IO donor count","eng_c:iodonor_c",7.54173374667819,4.04489524271321,0.042112245476623,0.220830124504711,18.6326630675546,36,,
+"NV12","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","IO donor count","(Intercept)",0.956261647590659,4.17151625258393,0.826041228360692,-7.83205780384443,9.69281075612957,44,,
+"NV12","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","IO donor count","eng_c",5.45444679609512,10.3696854992515,0.626225341885748,-17.5184344912791,29.151741532317,44,,
+"NV12","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","IO donor count","iodonor_c",0.0381422409773128,0.126675562040314,0.775896168185438,-0.224110317514788,0.326624507614994,44,,
+"NV12","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","IO donor count","REGCHANGE",0.440148279440566,1.01692030859396,0.686759792707867,-1.74771542090124,2.96560636493426,44,,
+"NV12","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","IO donor count","v2csreprss",0.471920472752052,0.366681492164161,0.206057297267357,-0.253015248209497,1.38564116455667,44,,
+"NV12","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","IO donor count","lngdp_yr",-0.587127716269394,0.567144923594307,0.324967844376962,-1.83021861085866,0.594242308431952,44,,
+"NV12","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","IO donor count","time_in_campaign",0.000940642241491778,0.465256587377908,0.99862399750696,-1.19878664584995,1.15035860124486,44,,
+"NV12","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","IO donor count","lnnum_image_sum",0.48511521662485,0.416268130695127,0.256690481088358,-0.335698672445349,1.62623805881139,44,,
+"NV12","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","IO donor count","eng_c:iodonor_c",1.62306441063769,3.52408273752271,0.739995729112447,-7.66993984948012,10.1891494102576,44,,
+"NV12_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","IO donor count","(Intercept)",,,,,,44,FALSE,"gee_error_not_reported"
+"NV12_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","IO donor count","eng_c",,,,,,44,FALSE,"gee_error_not_reported"
+"NV12_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","IO donor count","iodonor_c",,,,,,44,FALSE,"gee_error_not_reported"
+"NV12_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","IO donor count","REGCHANGE",,,,,,44,FALSE,"gee_error_not_reported"
+"NV12_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","IO donor count","v2csreprss",,,,,,44,FALSE,"gee_error_not_reported"
+"NV12_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","IO donor count","lngdp_yr",,,,,,44,FALSE,"gee_error_not_reported"
+"NV12_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","IO donor count","time_in_campaign",,,,,,44,FALSE,"gee_error_not_reported"
+"NV12_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","IO donor count","lnnum_image_sum",,,,,,44,FALSE,"gee_error_not_reported"
+"NV12_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","IO donor count","eng_c:iodonor_c",,,,,,44,FALSE,"gee_error_not_reported"
+"NV13","Firth PML","concession (nonviolent)","CSO repression","(Intercept)",-4.91070621428894,3.93338931464579,0.214334191677446,-13.4716689832429,2.76982408885624,81,,
+"NV13","Firth PML","concession (nonviolent)","CSO repression","eng_c",-8.97053604863098,9.45312249246817,0.345644993660169,-28.8926942701428,9.55385871673371,81,,
+"NV13","Firth PML","concession (nonviolent)","CSO repression","repress_c",0.809698409749173,0.299628240001693,0.00440904121149743,0.242223470573,1.46826664897368,81,,
+"NV13","Firth PML","concession (nonviolent)","CSO repression","goalsREGCHANGE",1.31057478318801,1.62962183670672,0.398453316530222,-1.57295391699989,6.36238751650884,81,,
+"NV13","Firth PML","concession (nonviolent)","CSO repression","goalsSECESSION",-0.400614907111095,2.21648127645237,0.861539559738142,-5.91750163792702,5.13482191937874,81,,
+"NV13","Firth PML","concession (nonviolent)","CSO repression","p_polity2",-0.0558938057747593,0.0718073977796187,0.447345662382767,-0.205677530335339,0.088479528793102,81,,
+"NV13","Firth PML","concession (nonviolent)","CSO repression","lngdp",-0.220878171426823,0.265757451900808,0.413874331234345,-0.773146597146593,0.309359158613049,81,,
+"NV13","Firth PML","concession (nonviolent)","CSO repression","lnpop",0.316806355178377,0.205995540841913,0.130105395649983,-0.092128889170561,0.762205206830024,81,,
+"NV13","Firth PML","concession (nonviolent)","CSO repression","colonized_english1",0.499986839172646,0.760965581829035,0.512816254794961,-0.981859179320808,2.10926068195565,81,,
+"NV13","Firth PML","concession (nonviolent)","CSO repression","lnlengthofcam",-0.378418967341598,0.443301152118684,0.407588111479037,-1.30337047712568,0.519802487044673,81,,
+"NV13","Firth PML","concession (nonviolent)","CSO repression","lnnum_image_sum",0.0805026342144343,0.267472197223766,0.770661285936942,-0.462864508641267,0.640693344830326,81,,
+"NV13","Firth PML","concession (nonviolent)","CSO repression","eng_c:repress_c",15.3519413056766,8.07667410712945,0.0541761095722483,-0.267165199367783,33.82788764957,81,,
+"NV17","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","CSO repression","(Intercept)",-0.572485506038792,3.36843214225836,0.869066863720061,-7.57642060910898,6.33717911946555,49,,
+"NV17","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","CSO repression","eng_c",2.59559357243951,10.6236854899465,0.819176937955998,-21.0898994892316,24.8111693486617,49,,
+"NV17","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","CSO repression","repress_c",0.496985505792525,0.366157583013075,0.165424378789277,-0.195010625973731,1.34959082762334,49,,
+"NV17","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","CSO repression","REGCHANGE",0.810290094985003,0.971692827410194,0.402693736270157,-1.01623380351169,3.21502591307366,49,,
+"NV17","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","CSO repression","lngdp_yr",-0.201007387616273,0.399499222984268,0.626452174326902,-1.09261720372905,0.602107106928745,49,,
+"NV17","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","CSO repression","time_in_campaign",-0.140341708456732,0.38552054132266,0.728996291732644,-1.07014432536175,0.619284362081785,49,,
+"NV17","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","CSO repression","lnnum_image_sum",0.14580565505486,0.34923110465849,0.685462199575805,-0.562687264162982,0.903360539315705,49,,
+"NV17","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","CSO repression","eng_c:repress_c",8.64375841506553,10.5284239759635,0.415417178435181,-11.4240556519315,36.5688022177065,49,,
+"NV17_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","CSO repression","(Intercept)",-0.136337786144531,4.1782389101294,0.973969292834268,-8.32568604999815,8.05301047770909,49,TRUE,"reported"
+"NV17_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","CSO repression","eng_c",7.04347390147397,10.2148085613571,0.490486293576832,-12.977550878786,27.064498681734,49,TRUE,"reported"
+"NV17_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","CSO repression","repress_c",0.609798156373668,0.448474191321621,0.17391937327364,-0.26921125861671,1.48880757136405,49,TRUE,"reported"
+"NV17_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","CSO repression","REGCHANGE",1.18009544377291,1.05773706077687,0.264559393674154,-0.89306919534976,3.25326008289559,49,TRUE,"reported"
+"NV17_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","CSO repression","lngdp_yr",-0.410254253194006,0.584626012880898,0.482842608528464,-1.55612123844057,0.735612732052553,49,TRUE,"reported"
+"NV17_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","CSO repression","time_in_campaign",-0.0405739526074147,0.311991377382461,0.896528202192302,-0.652077052277038,0.570929147062208,49,TRUE,"reported"
+"NV17_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","CSO repression","lnnum_image_sum",0.260167887834517,0.425550290579554,0.540955892609564,-0.573910681701409,1.09424645737044,49,TRUE,"reported"
+"NV17_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","CSO repression","eng_c:repress_c",9.87349018094522,13.0562269399021,0.449512241772255,-15.7167146212629,35.4636949831534,49,TRUE,"reported"
+"NV14","Firth PML","concession (nonviolent)","Civil liberties","(Intercept)",-4.86075500303426,3.78795147587785,0.199910858686607,-13.0315085778551,2.5148282483613,85,,
+"NV14","Firth PML","concession (nonviolent)","Civil liberties","eng_c",-9.10923593366672,9.62753096508575,0.351007515857774,-29.3493551506334,9.94740518787641,85,,
+"NV14","Firth PML","concession (nonviolent)","Civil liberties","civlib_c",3.22852459696104,2.72657805306849,0.240975292782082,-2.15770850911638,8.95483669229129,85,,
+"NV14","Firth PML","concession (nonviolent)","Civil liberties","goalsREGCHANGE",1.24499110149015,1.62271719663735,0.414869370556973,-1.58123472626109,6.26739578353445,85,,
+"NV14","Firth PML","concession (nonviolent)","Civil liberties","goalsSECESSION",-0.0179548610415131,2.24968027565409,0.993871085780141,-5.63539954217226,5.54493841829613,85,,
+"NV14","Firth PML","concession (nonviolent)","Civil liberties","v2csreprss",0.17884202138213,0.4013363129578,0.65947124554206,-0.622210931046139,0.998487829048632,85,,
+"NV14","Firth PML","concession (nonviolent)","Civil liberties","lngdp",-0.281934455538954,0.261422509534828,0.286291899142034,-0.818200850814419,0.237030473164781,85,,
+"NV14","Firth PML","concession (nonviolent)","Civil liberties","lnpop",0.333809903513309,0.194112629267425,0.0866051659490653,-0.0472632464187731,0.745454755873265,85,,
+"NV14","Firth PML","concession (nonviolent)","Civil liberties","colonized_english1",1.57138444464223,0.878870444000016,0.0690573949286344,-0.119331984478483,3.47167934474234,85,,
+"NV14","Firth PML","concession (nonviolent)","Civil liberties","lnlengthofcam",-0.350166692498505,0.440038621067429,0.438845625435443,-1.28435674397785,0.531588443164164,85,,
+"NV14","Firth PML","concession (nonviolent)","Civil liberties","lnnum_image_sum",0.0328676902462347,0.249352772158576,0.898041213570165,-0.468555329565994,0.55246837755112,85,,
+"NV14","Firth PML","concession (nonviolent)","Civil liberties","eng_c:civlib_c",84.1403524674671,49.8827522247881,0.0895594707557391,-12.6226789145962,192.900390030248,85,,
+"NV18","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Civil liberties","(Intercept)",-0.645837025052955,3.30823862846239,0.849230698066686,-7.50152230433302,6.09471269272757,49,,
+"NV18","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Civil liberties","eng_c",3.36084061859259,11.3616240031779,0.779413693365414,-21.8176911012618,26.9056637584723,49,,
+"NV18","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Civil liberties","civlib_c",-0.881244873801354,4.39002549554994,0.845522508521243,-10.2984720133009,8.06213253881545,49,,
+"NV18","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Civil liberties","REGCHANGE",0.838743652662861,1.0185402605461,0.409702619626084,-1.08979424906207,3.30185475583946,49,,
+"NV18","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Civil liberties","v2csreprss",0.579457948215517,0.789334766728,0.473485843704065,-1.02129245636224,2.26504422511151,49,,
+"NV18","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Civil liberties","lngdp_yr",-0.216035353844178,0.402068870132307,0.600202060349195,-1.09277725333876,0.582709876399603,49,,
+"NV18","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Civil liberties","time_in_campaign",-0.0827643279287322,0.386047697051425,0.838905379156425,-1.00851859325433,0.678551551212558,49,,
+"NV18","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Civil liberties","lnnum_image_sum",0.177633472042239,0.364628695009574,0.637350745600959,-0.563722366731279,0.954311293508849,49,,
+"NV18","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Civil liberties","eng_c:civlib_c",40.0746793516861,64.4167939537089,0.549424099140433,-93.766552519552,178.95291110723,49,,
+"NV18_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Civil liberties","(Intercept)",-0.309494419600744,4.05249907428568,0.93912374202767,-8.25239260520068,7.6334037659992,49,TRUE,"reported"
+"NV18_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Civil liberties","eng_c",9.77170682235573,11.9945506762055,0.415256159459872,-13.737612503007,33.2810261477185,49,TRUE,"reported"
+"NV18_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Civil liberties","civlib_c",0.043313686080109,5.58948196447423,0.993817141598991,-10.9120709642894,10.9986983364496,49,TRUE,"reported"
+"NV18_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Civil liberties","REGCHANGE",1.33664213733303,0.929010916148796,0.150212922204335,-0.484219258318612,3.15750353298467,49,TRUE,"reported"
+"NV18_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Civil liberties","v2csreprss",0.537252906119974,0.930457170504853,0.563664239794371,-1.28644314806954,2.36094896030949,49,TRUE,"reported"
+"NV18_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Civil liberties","lngdp_yr",-0.396466506718606,0.616702561334371,0.520301163824944,-1.60520352693397,0.812270513496762,49,TRUE,"reported"
+"NV18_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Civil liberties","time_in_campaign",-0.0080865101549811,0.337803164884768,0.980901643044614,-0.670180713329126,0.654007693019164,49,TRUE,"reported"
+"NV18_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Civil liberties","lnnum_image_sum",0.248021297262909,0.487424845990593,0.610864323653348,-0.707331400878652,1.20337399540447,49,TRUE,"reported"
+"NV18_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Civil liberties","eng_c:civlib_c",26.5352063964283,88.9418219646353,0.765441076085857,-147.790764654257,200.861177447113,49,TRUE,"reported"
+"NV15","Firth PML","concession (nonviolent)","Political liberty","(Intercept)",-5.91810584406875,3.99723833702778,0.137269245592244,-14.601441629046,1.82896372465967,85,,
+"NV15","Firth PML","concession (nonviolent)","Political liberty","eng_c",-9.54976840292205,9.59955364921409,0.32714859725842,-29.8218594901371,9.47441343941671,85,,
+"NV15","Firth PML","concession (nonviolent)","Political liberty","clpol_c",2.78734064268293,2.59660722124857,0.286643756457747,-2.3197463635673,8.28890257183832,85,,
+"NV15","Firth PML","concession (nonviolent)","Political liberty","goalsREGCHANGE",1.40131376372562,1.64234333867778,0.368614871025851,-1.5098749653004,6.45694958384299,85,,
+"NV15","Firth PML","concession (nonviolent)","Political liberty","goalsSECESSION",0.112327702759388,2.28763521109877,0.96285394114901,-5.59945593182858,5.75072959309298,85,,
+"NV15","Firth PML","concession (nonviolent)","Political liberty","v2csreprss",0.170361928931641,0.478408137559611,0.725779232784881,-0.79527513188677,1.13637026561219,85,,
+"NV15","Firth PML","concession (nonviolent)","Political liberty","lngdp",-0.172790765808935,0.250355631535958,0.496186563199138,-0.6805708506952,0.327656375307102,85,,
+"NV15","Firth PML","concession (nonviolent)","Political liberty","lnpop",0.350729208252394,0.193337566549016,0.0700249880701382,-0.028144962560122,0.763500268823027,85,,
+"NV15","Firth PML","concession (nonviolent)","Political liberty","colonized_english1",1.36014599357433,0.763747075436778,0.070550704779853,-0.110916042119722,3.00453516906439,85,,
+"NV15","Firth PML","concession (nonviolent)","Political liberty","lnlengthofcam",-0.322176953128793,0.438202866601578,0.477542442514308,-1.25952908189555,0.560079638619416,85,,
+"NV15","Firth PML","concession (nonviolent)","Political liberty","lnnum_image_sum",-0.000568229346393105,0.25246157682233,0.998261439840782,-0.510705043074966,0.524769451945663,85,,
+"NV15","Firth PML","concession (nonviolent)","Political liberty","eng_c:clpol_c",87.9087976678794,46.2058588359194,0.0561439951064551,-2.2451184078444,189.237200627947,85,,
+"NV19","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Political liberty","(Intercept)",0.099994471345967,3.51604336045476,0.97791446619956,-7.0430946627482,7.46223511035716,49,,
+"NV19","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Political liberty","eng_c",4.21290873823035,10.6048239947516,0.709750898600793,-19.5497135321869,26.1741322307965,49,,
+"NV19","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Political liberty","clpol_c",-2.32854190897937,4.70829080163046,0.633955097167005,-13.1214896665877,7.09767779973274,49,,
+"NV19","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Political liberty","REGCHANGE",0.790739070465357,0.976469527999674,0.420020271640726,-1.0683169270604,3.20105928795017,49,,
+"NV19","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Political liberty","v2csreprss",0.878972181561613,0.973870435409865,0.377243464453032,-1.05593230203314,3.13811669794912,49,,
+"NV19","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Political liberty","lngdp_yr",-0.299916619559467,0.429111306883053,0.496804913386925,-1.21262901275792,0.566841667212569,49,,
+"NV19","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Political liberty","time_in_campaign",-0.0899023981843258,0.373695030137443,0.819287936196126,-0.989414725547284,0.649093356399976,49,,
+"NV19","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Political liberty","lnnum_image_sum",0.180122748632861,0.370104339567306,0.639260429113453,-0.569721275572778,0.987737882817371,49,,
+"NV19","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Political liberty","eng_c:clpol_c",35.6240824681009,57.0733946810283,0.551506699308747,-82.0822517079183,162.196577933978,49,,
+"NV19_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Political liberty","(Intercept)",0.0762881991415844,4.42507733161444,0.986245175706887,-8.59686337082271,8.74943976910588,49,TRUE,"reported"
+"NV19_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Political liberty","eng_c",10.244613356224,9.86797116062798,0.299191778300979,-9.09661011860684,29.5858368310549,49,TRUE,"reported"
+"NV19_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Political liberty","clpol_c",-1.53179715596772,4.61152099822786,0.739762823203732,-10.5703783124943,7.50678400055889,49,TRUE,"reported"
+"NV19_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Political liberty","REGCHANGE",1.26905280370365,1.04998864769502,0.226803186281591,-0.788924945778597,3.32703055318589,49,TRUE,"reported"
+"NV19_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Political liberty","v2csreprss",0.835712033863364,0.99412254141116,0.40054239340586,-1.11276814730251,2.78419221502924,49,TRUE,"reported"
+"NV19_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Political liberty","lngdp_yr",-0.435044552588357,0.659679356718923,0.509588353310502,-1.72801609175744,0.857926986580732,49,TRUE,"reported"
+"NV19_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Political liberty","time_in_campaign",-0.0145221631979391,0.312009583394704,0.962876692857663,-0.62606094665156,0.597016620255682,49,TRUE,"reported"
+"NV19_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Political liberty","lnnum_image_sum",0.253996956219398,0.489245413660346,0.603648732408835,-0.70492405455488,1.21291796699368,49,TRUE,"reported"
+"NV19_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Political liberty","eng_c:clpol_c",25.5550194005804,75.0027867465187,0.733313679153075,-121.450442622596,172.560481423757,49,TRUE,"reported"
+"NV16","Firth PML","concession (nonviolent)","Polity","(Intercept)",-5.01294148048215,3.97560200472748,0.215137591052909,-13.685271394843,2.82065259642637,81,,
+"NV16","Firth PML","concession (nonviolent)","Polity","eng_c",-10.9474292390073,10.0460920130732,0.284867420619897,-32.407665390553,8.98215360884281,81,,
+"NV16","Firth PML","concession (nonviolent)","Polity","polity_c",-0.0533234737125522,0.0711493783478349,0.463249240361043,-0.200412515800629,0.0894511264348042,81,,
+"NV16","Firth PML","concession (nonviolent)","Polity","goalsREGCHANGE",1.01335940241968,1.67473987594913,0.544468650672064,-2.1361222307527,6.10877529075606,81,,
+"NV16","Firth PML","concession (nonviolent)","Polity","goalsSECESSION",-0.444603636858783,2.26066525773205,0.852419408216776,-6.127306896279,5.17641893505911,81,,
+"NV16","Firth PML","concession (nonviolent)","Polity","v2csreprss",0.749416372477642,0.294923997517599,0.00783555491639698,0.189425999588152,1.38940674618582,81,,
+"NV16","Firth PML","concession (nonviolent)","Polity","lngdp",-0.230363321270005,0.265030040473904,0.391518654020675,-0.773694851954346,0.298024810724439,81,,
+"NV16","Firth PML","concession (nonviolent)","Polity","lnpop",0.259664466869986,0.19687835922485,0.198964632386497,-0.136106646481685,0.677533917527718,81,,
+"NV16","Firth PML","concession (nonviolent)","Polity","colonized_english1",0.343167062130437,0.771738807757651,0.659489684010772,-1.17801156277009,1.9548135204675,81,,
+"NV16","Firth PML","concession (nonviolent)","Polity","lnlengthofcam",-0.628212814952497,0.487617665447657,0.210565817331556,-1.68644573567163,0.346361362843577,81,,
+"NV16","Firth PML","concession (nonviolent)","Polity","lnnum_image_sum",0.272959482493049,0.292571324323375,0.356881833298221,-0.302849852505069,0.897543725124569,81,,
+"NV16","Firth PML","concession (nonviolent)","Polity","eng_c:polity_c",3.80970899020909,2.24546975260137,0.0934824528396672,-0.620614004473085,8.77963974444211,81,,
+"NV20","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Polity","(Intercept)",-5.23791869852298,4.29182874245889,0.227414511351913,-15.1167452194119,3.17250378199683,47,,
+"NV20","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Polity","eng_c",10.5628655359113,10.8246116065921,0.364309226526263,-12.9840170785159,34.3725611041311,47,,
+"NV20","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Polity","polity_c",-0.16817789688435,0.109245949032084,0.123993977081789,-0.41446956596653,0.0446883227098196,47,,
+"NV20","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Polity","REGCHANGE",1.21179630060182,1.23094719116639,0.330860357255325,-1.13803044977364,4.33015288797409,47,,
+"NV20","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Polity","v2csreprss",1.17997806099576,0.584597416128437,0.0360850248492486,0.0733133669607398,2.54557811628154,47,,
+"NV20","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Polity","lngdp_yr",0.143716724772627,0.436404776505398,0.753006951104401,-0.791745085405367,1.05027104424728,47,,
+"NV20","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Polity","time_in_campaign",-0.162026047634303,0.391064451285166,0.694090303452643,-1.11206173584805,0.618689156743936,47,,
+"NV20","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Polity","lnnum_image_sum",0.526938637424558,0.444839324879727,0.242401144653196,-0.351508230339228,1.50672083593567,47,,
+"NV20","Firth PML","concession (nonviolent, 2.1 pooled-year Firth diagnostic)","Polity","eng_c:polity_c",1.76998060392951,2.19440181000794,0.427769631902792,-2.55889887311206,6.95367546191449,47,,
+"NV20_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Polity","(Intercept)",-5.9294104754754,5.71795187587152,0.29974446582009,-17.1365961521836,5.27777520123278,47,TRUE,"reported"
+"NV20_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Polity","eng_c",15.1356290004915,12.1663833744388,0.213479958625195,-8.71048241340852,38.9817404143916,47,TRUE,"reported"
+"NV20_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Polity","polity_c",-0.18984035456762,0.136584608037056,0.164556115196698,-0.457546186320251,0.0778654771850102,47,TRUE,"reported"
+"NV20_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Polity","REGCHANGE",1.77593710244932,1.59309065552525,0.264946995597123,-1.34652058238018,4.89839478727882,47,TRUE,"reported"
+"NV20_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Polity","v2csreprss",1.37259109793418,0.741220741167018,0.0640548326595212,-0.0802015547531778,2.82538375062153,47,TRUE,"reported"
+"NV20_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Polity","lngdp_yr",0.0799916502453526,0.619673447967794,0.897288982266162,-1.13456830777152,1.29455160826223,47,TRUE,"reported"
+"NV20_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Polity","time_in_campaign",-0.132895265104811,0.287790537676127,0.644240712970283,-0.696964718950019,0.431174188740397,47,TRUE,"reported"
+"NV20_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Polity","lnnum_image_sum",0.624087156080625,0.507635383011563,0.218921710659964,-0.370878194622038,1.61905250678329,47,TRUE,"reported"
+"NV20_GEE","GEE logit","concession (nonviolent, 2.1 clustered GEE companion)","Polity","eng_c:polity_c",1.77253141217107,2.95343203193518,0.54839968909639,-4.01619537042188,7.56125819476402,47,TRUE,"reported"

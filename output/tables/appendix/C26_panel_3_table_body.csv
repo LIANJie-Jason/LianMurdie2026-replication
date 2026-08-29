@@ -1,0 +1,12 @@
+Family,Model,Moderator,Focal term,Nominal p,Bootstrap-calibrated p,Empirical alpha@1.96,Empirical z(.05),Holm z crit,Bootstrap reps,Diagnostic status,Citable status,Source
+H1,M1,NA,I(eng_prob_general^2),0.036,0.060,0.077,2.150,2.836,999,Calibration diagnostic,Diagnostic,weibull_bootstrap_calibration.csv
+H2.1,M1,domaut_c,eng_c:domaut_c,0.253,0.323,0.081,2.250,3.086,999,Calibration diagnostic,Diagnostic,weibull_bootstrap_calibration.csv
+H2.1,M2,stterr_c,eng_c:stterr_c,0.513,0.565,0.076,2.106,2.728,999,Calibration diagnostic,Diagnostic,weibull_bootstrap_calibration.csv
+H2.2,M1,fdiin_c,eng_c:fdiin_c,0.063,0.125,0.108,2.445,3.455,999,Power row diagnostic-only; not size-calibrated,Diagnostic-only power,weibull_bootstrap_calibration.csv; power_h22_summary.csv
+H2.2,M2,trade_c,eng_c:trade_c,0.012,0.022,0.084,2.137,3.085,999,Power row diagnostic-only; not size-calibrated,Diagnostic-only power,weibull_bootstrap_calibration.csv; power_h22_summary.csv
+H2.2,M3,lnaid_c,eng_c:lnaid_c,0.863,0.896,0.115,2.445,3.490,999,Power row diagnostic-only; not size-calibrated,Diagnostic-only power,weibull_bootstrap_calibration.csv; power_h22_summary.csv
+H2.2,M4,iodonor_c,eng_c:iodonor_c,0.397,0.538,0.114,2.517,4.189,999,Power row diagnostic-only; not size-calibrated,Diagnostic-only power,weibull_bootstrap_calibration.csv; power_h22_summary.csv
+H3,M1,repress_c,eng_c:repress_c,0.054,0.100,0.094,2.231,3.179,999,Power row diagnostic-only; not size-calibrated,Diagnostic-only power,weibull_bootstrap_calibration.csv; power_h3_summary.csv
+H3,M2,civlib_c,eng_c:civlib_c,0.118,0.159,0.082,2.254,3.202,999,Power row diagnostic-only; not size-calibrated,Diagnostic-only power,weibull_bootstrap_calibration.csv; power_h3_summary.csv
+H3,M3,clpol_c,eng_c:clpol_c,0.076,0.107,0.070,2.156,3.103,999,Power row diagnostic-only; not size-calibrated,Diagnostic-only power,weibull_bootstrap_calibration.csv; power_h3_summary.csv
+H3,M4,polity_c,eng_c:polity_c,0.858,0.871,0.080,2.194,3.055,999,Power row diagnostic-only; not size-calibrated,Diagnostic-only power,weibull_bootstrap_calibration.csv; power_h3_summary.csv

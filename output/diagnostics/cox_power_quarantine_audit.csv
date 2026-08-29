@@ -1,0 +1,13 @@
+"source_file","family","spec","rows_removed","estimator","moderator","type1_at_null_05","raw_power_at_fitted_05","fit_ok_rate_min","cox_calibration_status","quarantine_reason","cox_power_citable"
+"power_h1_summary.csv","H1","M4",2,"Cox PH (counting-process)","(none — H1 unconditional curvilinear)",0.222,0.992,NA,"DEGENERATE_FIT","invalid_counting_process_dgp",FALSE
+"power_h1.csv","H1","M4",20,NA,NA,NA,NA,NA,"DEGENERATE_FIT","invalid_counting_process_dgp",FALSE
+"power_h1_smoke_summary.csv","H1","M4",2,"Cox PH (counting-process)","(none — H1 unconditional curvilinear)",0.2,1,NA,"DEGENERATE_FIT","invalid_counting_process_dgp",FALSE
+"power_h1_smoke.csv","H1","M4",20,NA,NA,NA,NA,NA,"DEGENERATE_FIT","invalid_counting_process_dgp",FALSE
+"power_h21_smoke_summary.csv","H2.1","M7",1,"Cox PH","domaut_c",0,1,NA,"OK","invalid_counting_process_dgp",FALSE
+"power_h21_smoke_summary.csv","H2.1","M8",1,"Cox PH","stterr_c",0,1,NA,"OK","invalid_counting_process_dgp",FALSE
+"power_h21_smoke.csv","H2.1","M7",10,"Cox PH","domaut_c",NA,NA,NA,"OK","invalid_counting_process_dgp",FALSE
+"power_h21_smoke.csv","H2.1","M8",10,"Cox PH","stterr_c",NA,NA,NA,"OK","invalid_counting_process_dgp",FALSE
+"power_h21_summary.csv","H2.1","M7",1,"Cox PH","domaut_c",0.104,0.988,NA,"INFLATED_TYPE1","invalid_counting_process_dgp",FALSE
+"power_h21_summary.csv","H2.1","M8",1,"Cox PH","stterr_c",0.15,0.816,NA,"INFLATED_TYPE1","invalid_counting_process_dgp",FALSE
+"power_h21.csv","H2.1","M7",10,"Cox PH","domaut_c",NA,NA,NA,"INFLATED_TYPE1","invalid_counting_process_dgp",FALSE
+"power_h21.csv","H2.1","M8",10,"Cox PH","stterr_c",NA,NA,NA,"INFLATED_TYPE1","invalid_counting_process_dgp",FALSE

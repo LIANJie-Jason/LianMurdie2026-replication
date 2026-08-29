@@ -1,0 +1,5 @@
+"model","geese_error","finite_output","converged","accepted_values_preserved","reporting_class"
+"M17_GEE",0,TRUE,TRUE,TRUE,"accepted_replicated"
+"M18_GEE",0,TRUE,TRUE,TRUE,"accepted_replicated"
+"M19_GEE",0,TRUE,TRUE,TRUE,"accepted_replicated"
+"M20_GEE",1,TRUE,FALSE,TRUE,"accepted_archival_nonconverged"

@@ -1,0 +1,45 @@
+Family,Model,Estimator,Dataset,DV,Moderator,Beta,Adjusted p,Correction,N
+H1,M1s,Weibull AFT,NAVCO 1.3,Time to success (strict),English share squared,186.395,0.238,BH,100
+H1,M2s,Firth PML,NAVCO 1.3,"Success (strict, binary)",English share squared,-238.239,0.415,BH,100
+H1,M4s,Cox PH,NAVCO 2.1,"Hazard of success (CY, strict)",English share squared,-338.445,0.415,BH,65
+H1,M5s,Firth PML,NAVCO 2.1,"Success (CY, strict, bin.)",English share squared,-143.345,0.653,BH,65
+H2.1,M1s,Weibull AFT,NAVCO 1.3,Time to success (strict),domaut_c,-6.068,0.892,BH,101
+H2.1,M2s,Weibull AFT,NAVCO 1.3,Time to success (strict),stterr_c,-0.120,1.000,BH,101
+H2.1,M3s,Firth PML,NAVCO 1.3,"Success (strict, binary)",domaut_c,11.044,0.892,BH,101
+H2.1,M4s,Firth PML,NAVCO 1.3,"Success (strict, binary)",stterr_c,0.276,1.000,BH,101
+H2.1,M7s,Cox PH,NAVCO 2.1,"Hazard of success (CY, strict)",domaut_c,1.000,1.000,BH,65
+H2.1,M8s,Cox PH,NAVCO 2.1,"Hazard of success (CY, strict)",stterr_c,0.032,1.000,BH,65
+H2.1,M9s,Firth PML,NAVCO 2.1,"Yearly success (CY, strict bin.)",domaut_c,1.629,1.000,BH,65
+H2.1,M10s,Firth PML,NAVCO 2.1,"Yearly success (CY, strict bin.)",stterr_c,-0.000,1.000,BH,65
+H2.2,M1s,Weibull AFT,NAVCO 1.3,Time to success (strict),fdiin_c,-2.787,0.230,BH,97
+H2.2,M2s,Weibull AFT,NAVCO 1.3,Time to success (strict),trade_c,-5.464,0.366,BH,91
+H2.2,M3s,Weibull AFT,NAVCO 1.3,Time to success (strict),lnaid_c,1.871,0.904,BH,44
+H2.2,M4s,Weibull AFT,NAVCO 1.3,Time to success (strict),iodonor_c,0.129,0.960,BH,44
+H2.2,M5s,Firth PML,NAVCO 1.3,"Success (strict, binary)",fdiin_c,1.412,0.750,BH,97
+H2.2,M6s,Firth PML,NAVCO 1.3,"Success (strict, binary)",trade_c,6.877,0.393,BH,91
+H2.2,M7s,Firth PML,NAVCO 1.3,"Success (strict, binary)",lnaid_c,17.607,0.373,BH,44
+H2.2,M8s,Firth PML,NAVCO 1.3,"Success (strict, binary)",iodonor_c,13.188,0.366,BH,44
+H2.2,M13s,Cox PH,NAVCO 2.1,"Hazard of success (CY, strict)",fdiin_c,-10.464,0.373,BH,61
+H2.2,M14s,Cox PH,NAVCO 2.1,"Hazard of success (CY, strict)",trade_c,18.762,0.373,BH,60
+H2.2,M15s,Cox PH,NAVCO 2.1,"Hazard of success (CY, strict)",lnaid_c,19.614,0.373,BH,59
+H2.2,M16s,Cox PH,NAVCO 2.1,"Hazard of success (CY, strict)",iodonor_c,-12.039,0.230,BH,59
+H2.2,M17s,Firth PML,NAVCO 2.1,"Yearly success (CY, strict bin.)",fdiin_c,-5.203,0.373,BH,61
+H2.2,M18s,Firth PML,NAVCO 2.1,"Yearly success (CY, strict bin.)",trade_c,-11.135,0.855,BH,60
+H2.2,M19s,Firth PML,NAVCO 2.1,"Yearly success (CY, strict bin.)",lnaid_c,14.742,0.373,BH,59
+H2.2,M20s,Firth PML,NAVCO 2.1,"Yearly success (CY, strict bin.)",iodonor_c,-9.558,0.373,BH,59
+H3,M1s,Weibull AFT,NAVCO 1.3,Time to success (strict),repress_c,-2.859,0.703,BH,94
+H3,M2s,Weibull AFT,NAVCO 1.3,Time to success (strict),civlib_c,-12.650,0.737,BH,98
+H3,M3s,Weibull AFT,NAVCO 1.3,Time to success (strict),clpol_c,-15.793,0.717,BH,98
+H3,M4s,Weibull AFT,NAVCO 1.3,Time to success (strict),polity_c,0.356,0.778,BH,94
+H3,M5s,Firth PML,NAVCO 1.3,"Success (strict, binary)",repress_c,2.948,0.777,BH,94
+H3,M6s,Firth PML,NAVCO 1.3,"Success (strict, binary)",civlib_c,25.668,0.737,BH,98
+H3,M7s,Firth PML,NAVCO 1.3,"Success (strict, binary)",clpol_c,21.535,0.777,BH,98
+H3,M8s,Firth PML,NAVCO 1.3,"Success (strict, binary)",polity_c,2.478,0.703,BH,94
+H3,M13s,Cox PH,NAVCO 2.1,"Hazard of success (CY, strict)",repress_c,-2.719,0.777,BH,64
+H3,M14s,Cox PH,NAVCO 2.1,"Hazard of success (CY, strict)",civlib_c,-56.839,0.703,BH,64
+H3,M15s,Cox PH,NAVCO 2.1,"Hazard of success (CY, strict)",clpol_c,-29.629,0.777,BH,64
+H3,M16s,Cox PH,NAVCO 2.1,"Hazard of success (CY, strict)",polity_c,2.220,0.717,BH,62
+H3,M17s,Firth PML,NAVCO 2.1,"Yearly success (CY, strict bin.)",repress_c,-3.863,0.777,BH,64
+H3,M18s,Firth PML,NAVCO 2.1,"Yearly success (CY, strict bin.)",civlib_c,-18.296,0.855,BH,64
+H3,M19s,Firth PML,NAVCO 2.1,"Yearly success (CY, strict bin.)",clpol_c,-20.644,0.788,BH,64
+H3,M20s,Firth PML,NAVCO 2.1,"Yearly success (CY, strict bin.)",polity_c,0.586,0.855,BH,62

@@ -1,0 +1,9 @@
+Model,Path,Estimator,DV,Moderator,Focal term,Beta,SE,p,95% CI,N
+S1,B: Firth (resolved),Firth PML,concession_resolved,FDI,eng_c:fdiin_c,-3.354,3.384,0.367,"[-12.062, 3.654]",66
+S2,B: Firth (resolved),Firth PML,concession_resolved,Trade,eng_c:trade_c,4.482,11.207,0.716,"[-17.243, 34.976]",60
+S3,B: Firth (resolved),Firth PML,concession_resolved,Aid,eng_c:lnaid_c,30.325**,14.944,0.034,"[2.158, 66.182]",37
+S4,B: Firth (resolved),Firth PML,concession_resolved,IODonor,eng_c:iodonor_c,16.721***,6.089,0.001,"[5.556, 36.261]",37
+S5,C: bracl (ongoing=limited),bracl (MPL_Jeffreys),success3_v2 (ongoing=limited),FDI,eng_c:fdiin_c,-0.862,1.604,0.591,"[-4.006, 2.282]",97
+S6,C: bracl (ongoing=limited),bracl (MPL_Jeffreys),success3_v2 (ongoing=limited),Trade,eng_c:trade_c,-3.187,3.396,0.348,"[-9.844, 3.470]",91
+S7,C: bracl (ongoing=limited),bracl (MPL_Jeffreys),success3_v2 (ongoing=limited),Aid,eng_c:lnaid_c,-10.536,6.449,0.102,"[-23.176, 2.105]",44
+S8,C: bracl (ongoing=limited),bracl (MPL_Jeffreys),success3_v2 (ongoing=limited),IODonor,eng_c:iodonor_c,-3.814*,2.231,0.087,"[-8.186, 0.558]",44

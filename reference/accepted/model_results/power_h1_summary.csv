@@ -1,0 +1,7 @@
+"spec","estimator","moderator","test","beta_eng_hat","beta_eng2_hat","type1_at_null_05","raw_power_at_half_05","raw_power_at_fitted_05","raw_power_at_double_05","holm_power_at_fitted_05","raw_mde_mult_05","holm_mde_mult_05"
+"M2","Firth PML","(none — H1 unconditional curvilinear)","any_eng_effect_eng_eng2",37.1395247620101,-190.225681705382,0.0225,0.0195,0.063,0.343,0.001,Inf,Inf
+"M2","Firth PML","(none — H1 unconditional curvilinear)","p_eng2_single_coef",37.1395247620101,-190.225681705382,0.026,0.0385,0.119,0.3395,0,Inf,Inf
+"M1","Weibull AFT","(none — H1 unconditional curvilinear)","any_eng_effect_eng_eng2",-33.1673171227211,163.412537985835,0.0415,0.0505,0.282,1,0.0425,2,2
+"M1","Weibull AFT","(none — H1 unconditional curvilinear)","p_eng2_single_coef",-33.1673171227211,163.412537985835,0.032,0.071,0.4095,0.9995,0.0875,2,2
+"M5","Firth PML","(none — H1 unconditional curvilinear)","any_eng_effect_eng_eng2",83.2859382483252,-337.165563795714,0,0.0015,0.0475,0.5125,5e-04,Inf,Inf
+"M5","Firth PML","(none — H1 unconditional curvilinear)","p_eng2_single_coef",83.2859382483252,-337.165563795714,0.001,0.007,0.114,0.7265,0,Inf,Inf

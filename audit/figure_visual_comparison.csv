@@ -1,0 +1,4 @@
+"figure","raster_dpi","generated_width","generated_height","accepted_width","accepted_height","same_dimensions","mean_absolute_pixel_difference","max_absolute_pixel_difference","predeclared_mean_abs_threshold","verdict"
+"Figure_7",144,1180,604,1180,604,TRUE,0.0358085236564038,1,0.05,"PASS"
+"Figure_8",144,1584,648,1584,648,TRUE,0.0367338534012765,1,0.05,"PASS"
+"Figure_9",144,1512,892,1512,892,TRUE,0.03945033904056,1,0.05,"PASS"

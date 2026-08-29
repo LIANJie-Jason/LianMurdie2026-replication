@@ -1,0 +1,102 @@
+"CAMPAIGN","LOCATION","iso3","BYEAR","EYEAR","v2x_frassoc_thick"
+"2009 Anti-Saakashvili Campaign","Georgia","GEO",2009,2009,0.792
+"2012 Anti-Government Protests","Romania","ROU",2012,2012,0.819
+"2013 Cambodian election protests","Cambodia","KHM",2013,2014,0.5005
+"2014 Mexican anti-Corruption Campaign","Mexico","MEX",2014,2015,0.7865
+"2017 Anti-Gnassingbe","Togo","TGO",2017,2019,0.669666666666667
+"2017 Iran Anti-Government Protests","Iran","IRN",2017,2019,0.116666666666667
+"2018 Anti-government protests","Armenia","ARM",2018,2018,0.832
+"2019 Georgian Protests","Georgia","GEO",2019,2019,0.864
+"2019 Iranian protests","Iran","IRN",2019,2019,0.114
+"97000 Resist campaign","Montenegro","MNE",2019,2019,0.843
+"Al Qaeda in the Arabian Peninsula","Yemen","YEM",2009,2019,0.398
+"Albanian anti-corruption","Albania","ALB",2019,2019,0.825
+"Anti Ali Adduallah Saleh Campaign","Yemen","YEM",2011,2012,0.5735
+"Anti-Abdelaziz Bouteflika Campaign","Algeria","DZA",2010,2012,0.370666666666667
+"Anti-Aziz Protests","Mauritania","MRT",2011,2014,0.58225
+"Anti-Ben Ali Campaign (Jasmin Revolution)","Tunisia","TUN",2010,2011,0.4835
+"Anti-Compaore Campaign","Burkina Faso","BFA",2014,2014,0.893
+"Anti-Erdogan","Turkey","TUR",2013,2015,0.718
+"Anti-Erdogan II","Turkey","TUR",2017,2019,0.552333333333333
+"Anti-Hernandez","Honduras","HND",2017,2019,0.797
+"Anti-Houthi Movement","Yemen","YEM",2015,2019,0.2504
+"Anti-Interim Government","Kyrgyzstan","KGZ",2010,2010,0.746
+"Anti-Islamist Government Protests","Tunisia","TUN",2013,2014,0.8695
+"Anti-Jovenel Moise Protests","Haiti","HTI",2018,2019,0.7145
+"Anti-King Hamad Campaign","Bahrain","BHR",2011,2019,0.163333333333333
+"Anti-Maoist Campaign","Nepal","NPL",2012,2012,0.852
+"Anti-Martelly campaign","Haiti","HTI",2014,2016,0.703333333333333
+"Anti-Morales Protests","Guatemala","GTM",2017,2019,0.844
+"Anti-Morsi Protests","Egypt","EGY",2013,2013,0.292
+"Anti-Nasheed Campaign","Maldives","MDV",2012,2012,0.679
+"Anti-Nkurunziza Campaign","Burundi","BDI",2015,2015,0.267
+"Anti-Orban","Hungary","HUN",2017,2019,0.684
+"Anti-Ortega Protests","Nicaragua","NIC",2018,2019,0.2245
+"Anti-Park protests","South Korea","KOR",2015,2017,0.848666666666667
+"Anti-Rousseff","Brazil","BRA",2015,2016,0.918
+"Anti-Shiite Government Protests","Iraq","IRQ",2012,2014,0.686666666666667
+"Anti-Socialist Demonstrations","Bulgaria","BGR",2009,2009,0.839
+"Anti-Vucic","Serbia","SRB",2017,2019,0.696333333333333
+"Anti-Wade June 23 Movement","Senegal","SEN",2012,2012,0.85
+"Anti-Yameen","Maldives","MDV",2015,2019,0.6192
+"Anti-right wing government","Poland","POL",2016,2019,0.84325
+"Catalan separatist protest","Spain","ESP",2016,2019,0.8965
+"Civil Movement for Democracy","Thailand","THA",2013,2014,0.475
+"Colectiv Revolution","Romania","ROU",2015,2015,0.85
+"Colorful Revolution","Macedonia","MKD",2015,2017,0.764666666666667
+"Dance with me Campaign","Bulgaria","BGR",2013,2014,0.83
+"Day of Rage Protests","Iraq","IRQ",2011,2011,0.685
+"Djibouti Arab Spring","Djibouti","DJI",2011,2011,0.394
+"Euromaidan","Ukraine","UKR",2013,2014,0.691
+"Frente Nacionalæde Resistencia Popular (FNRP)","Honduras","HND",2009,2009,0.756
+"Green Revolution and Day of Rage","Iran","IRN",2009,2013,0.1044
+"Guatemala Uprising","Guatemala","GTM",2015,2015,0.822
+"Hernández Must Go campaign","Honduras","HND",2019,2019,0.804
+"Honduran indignados","Honduras","HND",2015,2015,0.803
+"Hong Kong pro-democracy (Umbrella Movement)","China","CHN",2014,2019,0.0453333333333333
+"ISIS-Afghanistan","Afghanistan","AFG",2015,2019,0.5954
+"Islamic State","Syria","SYR",2013,2019,0.059
+"Islamist militia factions (Second Libyan Civil War)","Libya","LBY",2014,2019,0.548333333333333
+"Kirti Monastery Protests","China","CHN",2012,2012,0.061
+"Kosovo Anti-Governmant Protests","Kosovo","XKX",2015,2019,0.8194
+"Let's Save Togo (Anti-Gnassingbe)","Togo","TGO",2012,2013,0.744
+"Libyan Civil War","Libya","LBY",2011,2011,0.509
+"M23","Democratic Republic of Congo","COD",2012,2013,0.523
+"Maoist Anti-Govt Protests","Nepal","NPL",2010,2010,0.836
+"Moldovan ""Grapevine"" Revolution","Moldova","MDA",2009,2009,0.727
+"Moldovan Anti-Government Protest","Moldova","MDA",2015,2016,0.744
+"Montenegrin Opposition Protest","Montenegro","MNE",2015,2015,0.83
+"Nasheed Supporters","Maldives","MDV",2012,2013,0.655
+"New Democracy Movement","Thailand","THA",2014,2019,0.245666666666667
+"Northern Mali conflict","Mali","MLI",2012,2015,0.79975
+"October Revolution","Lebanon","LBN",2019,2019,0.72
+"Out Correa Campaign","Ecuador","ECU",2015,2017,0.685
+"Panama Papers Anti-Government Protest","Iceland","ISL",2016,2016,0.905
+"Pro-Morsi Protests","Egypt","EGY",2013,2014,0.225
+"Pro-Ouattara Campaign","Ivory Coast","CIV",2010,2011,0.7475
+"Protest for Constitutional Reform","Jordan","JOR",2011,2013,0.529
+"Protests Against the Crisis Talks","Tunisia","TUN",2013,2013,0.876
+"Rebels in East Ukraine (Ukrainian Civil War)","Ukraine","UKR",2014,2019,0.67
+"Renewed Kurdistan Worker's Party (PKK)","Turkey","TUR",2015,2019,0.585
+"Renewed Western Sahara Independence Protests","Western Sahara","MAR",2010,2019,0.5738
+"Romania anti-government protest","Romania","ROU",2017,2019,0.823333333333333
+"Second Revolution","Kyrgyzstan","KGZ",2010,2010,0.746
+"Sinai Insurgency","Egypt","EGY",2013,2019,0.172285714285714
+"Smile Revolution","Algeria","DZA",2019,2019,0.383
+"Snow Revolution","Russia","RUS",2010,2019,0.3355
+"Syrian Civil War","Syria","SYR",2011,2019,0.0612222222222222
+"Syrian Uprising","Syria","SYR",2011,2011,0.07
+"UDAR","Bosnia-Herzegovina","BIH",2014,2014,0.861
+"Ultras ""United Ukraine"" Campaign","Ukraine","UKR",2014,2014,0.658
+"Western Southeast Asia Front","Myanmar","MMR",2015,2019,0.6308
+"Yellow Vests","France","FRA",2018,2019,0.8765
+"anti-Balaka","Central African Republic","CAF",2013,2014,0.544
+"anti-Kabila campaign","Democratic Republic of Congo","COD",2017,2018,0.501
+"anti-Maduro","Venezuela","VEN",2014,2019,0.427666666666667
+"anti-Mahdi movement","Iraq","IRQ",2019,2019,0.649
+"anti-Morales protests","Bolivia","BOL",2019,2019,0.757
+"anti-Pinera","Chile","CHL",2019,2019,0.884
+"anti-Rajoelina movement","Madagascar","MDG",2009,2014,0.721333333333333
+"anti-Ravalomanana movement","Madagascar","MDG",2009,2009,0.749
+"anti-Sisi protests","Egypt","EGY",2019,2019,0.145
+"anti-Áñez protests","Bolivia","BOL",2019,2019,0.757

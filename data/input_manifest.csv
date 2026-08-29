@@ -1,0 +1,4 @@
+file,rows,columns,analytic_unit,key_columns,required_columns,sha256,provenance
+df_final.csv,101,66,campaign-location,CAMPAIGN;LOCATION,CAMPAIGN;LOCATION;ID;success;limited;failure;ongoing;eng_prob_general;lengthofcampaign,e43ec4118c7594788a62d0ec2d486d242e2706a10d1c4a68acbfc13b81f95764,accepted merged NAVCO 1.3 analysis input
+df_navco21_panel.csv,65,79,NAVCO 2.1 source-campaign-year,ID;Year,ID;Campaign;Year;concession;full_success;progress_ord;eng_prop_year;duration;time_in_campaign;repression_yr,69d98f424d1c714c7bc899c71efee48740976a7d6478f65d43bc3269d0ab26b2,accepted merged NAVCO 2.1 analysis input
+h3_additional_moderators.csv,101,6,campaign-location,CAMPAIGN;LOCATION,CAMPAIGN;LOCATION;iso3;BYEAR;EYEAR;v2x_frassoc_thick,0076a9587509633c96c9540c7a7bd8cbd3fac62c9a52a3ecb0a69f0dc35979d0,frozen V-Dem v15 campaign-period mean needed only for accepted Appendix C20

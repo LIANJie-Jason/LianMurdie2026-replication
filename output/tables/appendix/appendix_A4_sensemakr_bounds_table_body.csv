@@ -1,0 +1,11 @@
+Family,Moderator,Beta (LPM),SE,p,RV,RV alpha,Bench R2y,Bench R2d,Adj. beta,N,Assessment
+H2.1 Political,domaut,2.216,1.587,0.166,0.135,---,0.056,0.001,2.120,101,Weak
+H2.1 Political,stterr,0.157,0.115,0.175,0.133,---,0.058,0.001,0.150,101,Weak
+H2.2 Economic,FDI,-0.107,0.493,0.828,0.024,---,0.071,0.002,-0.048,97,Fragile
+H2.2 Economic,Trade,2.609,1.053,0.015,0.244,0.052,0.136,0.001,2.494,91,Moderate
+H2.2 Economic,Aid,3.218,2.331,0.176,0.210,---,0.118,0.062,2.015,44,Moderate
+H2.2 Economic,IODonor,1.948,0.656,0.005,0.396,0.143,0.124,0.007,1.837,44,Robust
+H3 Domestic,Repress,2.084,1.230,0.094,0.171,---,0.015,0.014,1.924,94,Moderate
+H3 Domestic,CivLib,11.214,6.946,0.110,0.160,---,0.010,0.001,11.019,98,Moderate
+H3 Domestic,Political Liberty,10.109,6.836,0.143,0.148,---,0.001,0.006,9.949,98,Weak
+H3 Domestic,Polity,0.630,0.332,0.061,0.190,---,0.110,0.017,0.498,94,Moderate
