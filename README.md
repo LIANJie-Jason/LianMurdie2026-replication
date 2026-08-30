@@ -12,12 +12,18 @@ are intentionally outside this package.
 > Accepted for publication.
 
 - [Download the full online appendix](Lian_Murdie_2026_Full_Online_Appendix.docx).
+- [Browse the article and appendix plots](publication_figures/README.md).
 - Appendix SHA-256: `f2d922d27aefd8c6083f5fc16f7635f2d3ab4c181acd19bf4b623760713523b0`.
 - [Protest-sign detector code and weights](https://github.com/LIANJie-Jason/Protest-Sign-Detector).
 
 The online appendix is a byte-identical copy of the accepted
 `Appendix_FULL.docx`. Its checksum is also stored in
 `ONLINE_APPENDIX.sha256`.
+
+The plot gallery contains the analytical figures appearing in the accepted
+article and full online appendix. Publication-reference images are kept under
+`publication_figures/`; code-generated main Figures 7–9 and Appendix Figures
+C1–C2 remain under `output/figures/` with their numerical plot-data sidecars.
 
 ## Availability and rights
 
@@ -28,6 +34,10 @@ NAVCO, V-Dem, QoG, WDI, AidData, Polity, and the article's original measurement
 workflow; source components remain subject to their respective terms and
 citation requirements. Public availability of this package does not transfer
 rights in those upstream sources or in third-party media.
+
+The accepted appendix and publication-figure images are provided at no charge
+for non-commercial, no-derivatives use with citation of the accepted article,
+consistent with [Sage's author archiving and re-use guidelines](https://us.sagepub.com/en-us/nam/journal-author-archiving-policies-and-re-use).
 
 Please cite the accepted article when using the package. Code, data, appendix,
 and third-party components retain the rights described here and in their source
@@ -87,6 +97,7 @@ replication_datacode/
 ├── provenance/                  optional C20 reconstruction audit
 ├── environment/                 minimum and tested software versions
 ├── reference/accepted/          immutable accepted numerical artifacts
+├── publication_figures/         accepted article/appendix plot gallery
 ├── output/
 │   ├── estimates/               fitted-result CSVs
 │   ├── tables/main/             Tables 1–4 bodies
