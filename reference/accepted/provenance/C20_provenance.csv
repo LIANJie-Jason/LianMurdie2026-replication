@@ -4,9 +4,7 @@ artifact_path,data/h3_additional_moderators.csv
 artifact_sha256,0076a9587509633c96c9540c7a7bd8cbd3fac62c9a52a3ecb0a69f0dc35979d0
 artifact_shape,101 rows x 6 columns
 variable,v2x_frassoc_thick
-source,V-Dem v15 via vdemdata 15.0
-source_payload_sha256,4d858d95764aa0153e9ebbcba7c5e03425c6612c9648485916bd1e0344bd95cf
-source_description_sha256,bb700c0522f63bd0df65eb4e46d831d1f6115be6c44d64763a91bfff28f489a8
+source,V-Dem v15
 transformation,campaign-period mean frozen before publication replication
 country_mapping,countrycode COW numeric to ISO3; COW 345=SRB; COW 347=XKX
 campaign_window,"max(2009,BYEAR) through min(2019,EYEAR), inclusive"
@@ -14,12 +12,5 @@ aggregation,arithmetic mean over nonmissing campaign-years
 join_key,CAMPAIGN;LOCATION;iso3;BYEAR;EYEAR
 model_producer,code/R/15_fit_h3_extensions.R
 table_producer,code/R/34_build_appendix_h3.R
-optional_reconstruction_script,provenance/validate_C20_frozen_input.R
-optional_reconstruction_script_sha256,d81edc5ab260905b595dd90f3333b5068a7a110444aa965ae5ca3fbe411d847d
-validation_artifact,provenance/C20_validation.csv
-validation_artifact_sha256,0ea07deca4da496495b115f19ceaf5881d619a646d451b7df2303c02d46b6f93
-parity_max_abs_diff_v2x_civlib,4.163336342344337e-16
-parity_max_abs_diff_v2x_clpol,4.4408920985006262e-16
-reconstruction_max_abs_diff_v2x_frassoc_thick,4.4408920985006262e-16
 model_reference,reference/accepted/model_results/H3_table4_additional_moderators_results.csv
 table_reference,reference/accepted/appendix_tables/H3_additional_moderators_table_body.csv

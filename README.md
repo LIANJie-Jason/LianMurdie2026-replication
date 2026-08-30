@@ -59,7 +59,6 @@ reported as incomplete. Use the full profile for publication replication.
 | [`publication_figures/`](publication_figures/) | Reader-facing article and appendix plot gallery |
 | [`audit/`](audit/) | Validation summaries and software information from the verified run |
 | [`docs/`](docs/) | Detailed specification and exhibit mapping for technical review |
-| [`provenance/`](provenance/) | Optional reconstruction check for one auxiliary appendix input |
 
 The analysis begins with three supplied files:
 

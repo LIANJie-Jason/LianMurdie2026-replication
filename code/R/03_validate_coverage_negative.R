@@ -66,63 +66,76 @@ c20_get <- function(field, default = "") {
   if (field %in% names(c20_values)) c20_values[[field]] else default
 }
 c20_required <- c(
-  "artifact_path", "artifact_sha256", "source", "source_payload_sha256",
-  "source_description_sha256", "optional_reconstruction_script",
-  "optional_reconstruction_script_sha256", "validation_artifact",
-  "validation_artifact_sha256", "parity_max_abs_diff_v2x_civlib",
-  "parity_max_abs_diff_v2x_clpol", "reconstruction_max_abs_diff_v2x_frassoc_thick"
+  "exhibit", "artifact_path", "artifact_sha256", "artifact_shape", "variable",
+  "source", "transformation", "country_mapping", "campaign_window",
+  "aggregation", "join_key", "model_producer", "table_producer",
+  "model_reference", "table_reference"
 )
+c20_contract_fields_ok <- identical(as.character(c20_contract$field), c20_required)
 c20_artifact_path <- c20_get("artifact_path")
-c20_script_path <- c20_get("optional_reconstruction_script")
-c20_validation_path <- c20_get("validation_artifact")
-c20_diff <- suppressWarnings(as.numeric(c(
-  c20_get("parity_max_abs_diff_v2x_civlib", NA_character_),
-  c20_get("parity_max_abs_diff_v2x_clpol", NA_character_),
-  c20_get("reconstruction_max_abs_diff_v2x_frassoc_thick", NA_character_)
-)))
-c20_validation <- if (nzchar(c20_validation_path) &&
-                        file.exists(file.path(paths$root, c20_validation_path))) {
-  read.csv(file.path(paths$root, c20_validation_path), stringsAsFactors = FALSE,
-           check.names = FALSE)
-} else data.frame(field = character(), value = character())
-c20_validation_values <- if (all(c("field", "value") %in% names(c20_validation))) {
-  setNames(c20_validation$value, c20_validation$field)
+c20_artifact_file <- file.path(paths$root, c20_artifact_path)
+c20_input_manifest_path <- file.path(paths$data, "input_manifest.csv")
+c20_input_manifest <- if (file.exists(c20_input_manifest_path)) {
+  read.csv(c20_input_manifest_path, stringsAsFactors = FALSE, check.names = FALSE)
+} else data.frame()
+c20_input <- if ("file" %in% names(c20_input_manifest)) {
+  c20_input_manifest[c20_input_manifest$file == basename(c20_artifact_path), , drop = FALSE]
+} else data.frame()
+c20_required_columns <- if (nrow(c20_input) == 1L &&
+                                "required_columns" %in% names(c20_input)) {
+  strsplit(c20_input$required_columns[[1L]], ";", fixed = TRUE)[[1L]]
 } else character()
-c20_validation_get <- function(field, default = "") {
-  if (field %in% names(c20_validation_values)) c20_validation_values[[field]] else default
-}
-c20_static_crosslink <-
-  identical(c20_validation_get("vdemdata_version"), "15.0") &&
-  grepl("15[.]0", c20_get("source")) &&
-  identical(c20_validation_get("vdemdata_payload_sha256"),
-            c20_get("source_payload_sha256")) &&
-  identical(c20_validation_get("vdemdata_description_sha256"),
-            c20_get("source_description_sha256")) &&
-  identical(c20_validation_get("frozen_input_sha256"),
-            c20_get("artifact_sha256")) &&
-  identical(c20_validation_get("campaign_rows"), "101") &&
-  identical(paste(c20_validation_get("country_mapping"),
-                  c20_validation_get("country_overrides"), sep = "; "),
-            c20_get("country_mapping")) &&
-  identical(c20_validation_get("campaign_window"), c20_get("campaign_window")) &&
-  identical(c20_validation_get("aggregation"), c20_get("aggregation"))
-c20_ok <- nrow(c20) == 1L && nzchar(c20$provenance_artifact) &&
-  nzchar(c20$provenance_reference) && all(c20_required %in% names(c20_values)) &&
-  identical(c20_artifact_path, c20$provenance_artifact) &&
-  file.exists(file.path(paths$root, c20_artifact_path)) &&
-  identical(rep_sha256_file(file.path(paths$root, c20_artifact_path)),
-            c20_get("artifact_sha256")) &&
-  file.exists(file.path(paths$root, c20_script_path)) &&
-  identical(rep_sha256_file(file.path(paths$root, c20_script_path)),
-            c20_get("optional_reconstruction_script_sha256")) &&
-  file.exists(file.path(paths$root, c20_validation_path)) &&
-  identical(rep_sha256_file(file.path(paths$root, c20_validation_path)),
-            c20_get("validation_artifact_sha256")) &&
-  identical(c20_validation_get("audit_status"), "PASS") &&
-  c20_static_crosslink &&
-  all(is.finite(c20_diff)) && all(c20_diff <= 1e-8)
-record_coverage("c20_provenance", c20_ok,
-                "C20 frozen input, source payload, construction script, and parity audit are hash-linked")
+c20_model_producer <- c20_get("model_producer")
+c20_table_producer <- c20_get("table_producer")
+c20_model_reference <- c20_get("model_reference")
+c20_table_reference <- c20_get("table_reference")
+c20_model_manifest <- reference_manifest[
+  reference_manifest$reference_path == c20_model_reference, , drop = FALSE
+]
+c20_ok <- nrow(c20) == 1L && identical(c20$component_id[[1L]], "body") &&
+  nzchar(c20$provenance_artifact[[1L]]) && nzchar(c20$provenance_reference[[1L]]) &&
+  c20_contract_fields_ok &&
+  identical(c20_get("exhibit"), "Appendix C20") &&
+  identical(c20_artifact_path, "data/h3_additional_moderators.csv") &&
+  identical(c20_artifact_path, c20$provenance_artifact[[1L]]) &&
+  file.exists(c20_artifact_file) &&
+  identical(rep_sha256_file(c20_artifact_file), c20_get("artifact_sha256")) &&
+  nrow(c20_input) == 1L &&
+  identical(tolower(c20_input$sha256[[1L]]), c20_get("artifact_sha256")) &&
+  identical(sprintf("%d rows x %d columns", c20_input$rows[[1L]],
+                    c20_input$columns[[1L]]), c20_get("artifact_shape")) &&
+  identical(c20_input$key_columns[[1L]], "CAMPAIGN;LOCATION") &&
+  "v2x_frassoc_thick" %in% c20_required_columns &&
+  identical(c20_get("variable"), "v2x_frassoc_thick") &&
+  identical(c20_get("source"), "V-Dem v15") &&
+  identical(c20_get("transformation"),
+            "campaign-period mean frozen before publication replication") &&
+  identical(c20_get("country_mapping"),
+            "countrycode COW numeric to ISO3; COW 345=SRB; COW 347=XKX") &&
+  identical(c20_get("campaign_window"),
+            "max(2009,BYEAR) through min(2019,EYEAR), inclusive") &&
+  identical(c20_get("aggregation"),
+            "arithmetic mean over nonmissing campaign-years") &&
+  identical(c20_get("join_key"), "CAMPAIGN;LOCATION;iso3;BYEAR;EYEAR") &&
+  identical(c20_model_producer, "code/R/15_fit_h3_extensions.R") &&
+  identical(c20_table_producer, "code/R/34_build_appendix_h3.R") &&
+  identical(c20_model_reference,
+            "reference/accepted/model_results/H3_table4_additional_moderators_results.csv") &&
+  identical(c20_table_reference,
+            "reference/accepted/appendix_tables/H3_additional_moderators_table_body.csv") &&
+  file.exists(file.path(paths$root, c20_model_producer)) &&
+  file.exists(file.path(paths$root, c20_table_producer)) &&
+  file.exists(file.path(paths$root, c20_model_reference)) &&
+  file.exists(file.path(paths$root, c20_table_reference)) &&
+  identical(c20_table_reference, c20$reference_path[[1L]]) &&
+  nrow(c20_model_manifest) == 1L &&
+  identical(c20_model_manifest$output_path[[1L]],
+            "output/estimates/H3_table4_additional_moderators_results.csv") &&
+  identical(c20_model_manifest$comparison[[1L]], "numeric")
+record_coverage(
+  "c20_frozen_input_integrity", c20_ok,
+  "C20 frozen auxiliary input is hash-locked in the input manifest and linked to its model and table producers/references"
+)
 
 lineage_path <- file.path(paths$reference, "provenance", "archival_passthroughs.csv")
 lineage <- if (file.exists(lineage_path)) {

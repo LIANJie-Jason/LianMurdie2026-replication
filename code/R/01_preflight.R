@@ -26,9 +26,7 @@ rep_assert(!length(missing_scripts), "Pipeline scripts are missing: %s", paste(m
 
 portable_r <- c(
   list.files(paths$code, pattern = "[.]R$", recursive = TRUE, full.names = TRUE),
-  file.path(paths$root, "run_all.R"),
-  list.files(file.path(paths$root, "provenance"), pattern = "[.]R$",
-             recursive = TRUE, full.names = TRUE)
+  file.path(paths$root, "run_all.R")
 )
 portable_r <- unique(portable_r[file.exists(portable_r)])
 absolute_hits <- unlist(lapply(portable_r, function(path) {

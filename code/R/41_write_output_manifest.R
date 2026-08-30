@@ -33,9 +33,7 @@ if (dir.exists(paths$cache) && !length(list.files(paths$cache, all.files = TRUE,
 
 code_files <- c(
   file.path(paths$root, "run_all.R"),
-  list.files(paths$code, pattern = "[.]R$", recursive = TRUE, full.names = TRUE),
-  list.files(file.path(paths$root, "provenance"), pattern = "[.]R$",
-             recursive = TRUE, full.names = TRUE)
+  list.files(paths$code, pattern = "[.]R$", recursive = TRUE, full.names = TRUE)
 )
 code_files <- sort(unique(code_files[file.exists(code_files)]))
 code_manifest <- data.frame(
