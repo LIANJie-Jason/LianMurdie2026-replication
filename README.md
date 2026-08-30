@@ -11,7 +11,7 @@ are outside the scope of this package.
 > Signs Influence Campaign Success.” *Journal of Conflict Resolution*.
 > Accepted for publication.
 
-- [Full online appendix](Lian_Murdie_2026_Full_Online_Appendix.docx)
+- [Full online appendix](Lian_Murdie_2026_Full_Online_Appendix.pdf)
 - [Article and appendix plot gallery](publication_figures/README.md)
 - [Protest-sign detector code and weights](https://github.com/LIANJie-Jason/Protest-Sign-Detector)
 
