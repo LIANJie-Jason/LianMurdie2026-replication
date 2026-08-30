@@ -14,10 +14,10 @@ confidence interval, sample/event count, diagnostics, and plotted values).
 
 ## Frozen inputs
 
-| File | Shape | Analytic unit | SHA-256 |
-|---|---:|---|---|
-| `data/df_final.csv` | 101 x 66 | campaign-location | `e43ec4118c7594788a62d0ec2d486d242e2706a10d1c4a68acbfc13b81f95764` |
-| `data/df_navco21_panel.csv` | 65 x 79 | NAVCO 2.1 source-campaign-year | `69d98f424d1c714c7bc899c71efee48740976a7d6478f65d43bc3269d0ab26b2` |
+| File | Shape | Analytic unit |
+|---|---:|---|
+| `data/df_final.csv` | 101 x 66 | campaign-location |
+| `data/df_navco21_panel.csv` | 65 x 79 | NAVCO 2.1 source-campaign-year |
 
 Appendix C20 additionally requires the campaign-period mean of V-Dem
 `v2x_frassoc_thick`, which is absent from the accepted `df_final.csv`. The
@@ -73,10 +73,10 @@ robustness rows are outside those families.
 | C26 | 34 Cox PH rows, 3 Cox-power quarantine rows, and 11 Weibull-calibration rows |
 
 Appendix Figures C1 and C2 are the H1 curvature and H3 interaction forest
-plots. The deleted duplicate identification section from the earlier build is
-not an accepted exhibit and must never be regenerated.
+plots. A duplicate identification section from an earlier draft is not part of
+the accepted appendix and is intentionally omitted.
 
-## Fail-fast row-count invariants
+## Expected output sizes
 
 - Model results: H1 14; H2.1 24; H2.2 48; H3 48; H2.1-curvilinear 20;
   H2.1-limited 8; H3-additional 4; ongoing 96; nonviolent 289;
