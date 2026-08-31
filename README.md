@@ -5,6 +5,8 @@ This repository reproduces the numerical results in the accepted version of
 from the frozen, merged analysis data. Raw-source merging and image processing
 are outside the scope of this package.
 
+AI usage notice: AI tools are utilized for coding assistance and cleaning.
+
 ## Article and companion materials
 
 > Lian, Jie, and Amanda Murdie. “Attention or Backlash: How English Protest
