@@ -6,21 +6,11 @@ if (!nzchar(root)) {
 }
 source(file.path(root, "code", "R", "00_setup.R"))
 P <- init_replication(root)
-profile <- Sys.getenv("REPLICATION_PROFILE", unset = "full")
-rep_assert(profile %in% c("fast", "full"), "Unknown profile: %s", profile)
 
 exhibit_path <- file.path(P$reference, "exhibit_manifest.csv")
 rep_assert_file(exhibit_path, "Accepted exhibit manifest")
 exhibits <- read.csv(exhibit_path, stringsAsFactors = FALSE, check.names = FALSE)
 tables <- exhibits[exhibits$artifact_kind == "table", , drop = FALSE]
-
-reference_manifest <- rep_load_reference_manifest(P)
-profile_by_reference <- setNames(reference_manifest$required_profile,
-                                 reference_manifest$reference_path)
-required_profile <- profile_by_reference[tables$reference_path]
-rep_assert(!anyNA(required_profile), "A table exhibit is absent from the reference manifest")
-active <- required_profile == "fast" | (profile == "full" & required_profile == "full")
-tables <- tables[active, , drop = FALSE]
 
 display_mismatches <- function(actual_path, expected_path) {
   read_display <- function(path) {
@@ -100,7 +90,7 @@ lineage <- do.call(rbind, rows)
 write.csv(lineage, file.path(P$diagnostics, "display_materialization.csv"),
           row.names = FALSE, na = "")
 rep_assert(all(lineage$status == "PASS"), "Accepted display materialization failed")
-expected_rows <- if (profile == "full") 32L else 28L
+expected_rows <- 32L
 rep_assert(nrow(lineage) == expected_rows,
            "Display materialization expected %d rows, found %d", expected_rows, nrow(lineage))
 cat(sprintf("Materialized %d accepted table displays byte-exactly after numerical rebuilding.\n",

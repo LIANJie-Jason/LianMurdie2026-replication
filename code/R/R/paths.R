@@ -1,7 +1,3 @@
-rep_is_absolute_path <- function(path) {
-  grepl("^(?:/|[A-Za-z]:[/\\\\]|~)", path)
-}
-
 rep_find_root <- function(start = getwd()) {
   env_root <- Sys.getenv("REPLICATION_ROOT", unset = "")
   candidates <- c(env_root, start)

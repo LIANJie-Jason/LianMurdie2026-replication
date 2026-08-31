@@ -34,30 +34,6 @@ out_path     <- file.path(P$estimates, "H3_table4_additional_moderators_results.
 h3_results_path <- file.path(P$estimates, "H3_results.csv")
 cache_path   <- file.path(P$cache, "H3_additional_moderators_models.rds")
 
-assert_required_cols <- function(dat, required_cols, label) {
-  missing_cols <- setdiff(required_cols, names(dat))
-  if (length(missing_cols) > 0) {
-    stop(
-      sprintf("%s is missing required columns: %s", label, paste(missing_cols, collapse = ", ")),
-      call. = FALSE
-    )
-  }
-}
-
-assert_unique_keys <- function(dat, keys, label) {
-  dupes <- dat[duplicated(dat[keys]) | duplicated(dat[keys], fromLast = TRUE), keys, drop = FALSE]
-  if (nrow(dupes) > 0) {
-    stop(sprintf("Duplicate %s keys detected.", label), call. = FALSE)
-  }
-}
-
-assert_no_nonfinite <- function(x, label) {
-  bad <- sum(!is.finite(x[!is.na(x)]))
-  if (bad > 0) {
-    stop(sprintf("%s contains %d non-finite non-missing values.", label, bad), call. = FALSE)
-  }
-}
-
 stars_for_p <- function(p) {
   if (is.na(p)) {
     ""
@@ -82,7 +58,7 @@ fmt_b <- function(b) ifelse(is.na(b), "NA", sprintf("%.3f", b))
 ###############################################################################
 
 df <- read.csv(navco13_path)
-assert_required_cols(
+rep_assert_columns(
   df,
   c(
     "CAMPAIGN", "LOCATION", "iso3", "EYEAR", "BYEAR", "success", "limited",
@@ -91,15 +67,15 @@ assert_required_cols(
   ),
   "df_final.csv"
 )
-assert_unique_keys(df, c("CAMPAIGN", "LOCATION"), "df_final CAMPAIGN-LOCATION")
+rep_assert_unique(df, c("CAMPAIGN", "LOCATION"), "df_final CAMPAIGN-LOCATION")
 
 added_mods <- read.csv(moderator_path)
-assert_required_cols(
+rep_assert_columns(
   added_mods,
   c("CAMPAIGN", "LOCATION", "iso3", "BYEAR", "EYEAR", "v2x_frassoc_thick"),
   "h3_additional_moderators.csv"
 )
-assert_unique_keys(
+rep_assert_unique(
   added_mods, c("CAMPAIGN", "LOCATION"),
   "h3_additional_moderators CAMPAIGN-LOCATION"
 )
@@ -305,7 +281,7 @@ if (!file.exists(h3_results_path)) {
   stop("H3_results.csv is required before fitting the added H3 moderators.", call. = FALSE)
 }
 h3_results <- read.csv(h3_results_path)
-assert_required_cols(h3_results, c("model", "p_int", "main_panel"), "H3_results.csv")
+rep_assert_columns(h3_results, c("model", "p_int", "main_panel"), "H3_results.csv")
 h3_main_p <- h3_results$p_int[h3_results$main_panel %in% TRUE]
 if (length(h3_main_p) != 8L || any(!is.finite(h3_main_p))) {
   stop("H3_results.csv must contain exactly eight finite main-panel interaction p-values.", call. = FALSE)

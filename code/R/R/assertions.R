@@ -28,6 +28,13 @@ rep_assert_unique <- function(data, columns, label = "data") {
   invisible(data)
 }
 
+assert_no_nonfinite <- function(x, label) {
+  bad <- sum(!is.finite(x[!is.na(x)]))
+  if (bad > 0) {
+    stop(sprintf("%s contains %d non-finite non-missing values.", label, bad), call. = FALSE)
+  }
+}
+
 rep_require_packages <- function(packages) {
   missing <- packages[!vapply(packages, requireNamespace, logical(1), quietly = TRUE)]
   rep_assert(!length(missing), "Missing required R packages: %s", paste(missing, collapse = ", "))

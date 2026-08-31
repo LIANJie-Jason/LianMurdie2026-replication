@@ -49,30 +49,6 @@ out_path     <- file.path(P$estimates, "H3_results.csv")
 cache_path   <- file.path(P$cache, "H3_models.rds")
 frames_path  <- file.path(P$cache, "H3_analysis_frames.rds")
 
-assert_required_cols <- function(dat, required_cols, label) {
-  missing_cols <- setdiff(required_cols, names(dat))
-  if (length(missing_cols) > 0) {
-    stop(
-      sprintf("%s is missing required columns: %s", label, paste(missing_cols, collapse = ", ")),
-      call. = FALSE
-    )
-  }
-}
-
-assert_unique_keys <- function(dat, keys, label) {
-  dupes <- dat[duplicated(dat[keys]) | duplicated(dat[keys], fromLast = TRUE), keys, drop = FALSE]
-  if (nrow(dupes) > 0) {
-    stop(sprintf("Duplicate %s keys detected.", label), call. = FALSE)
-  }
-}
-
-assert_no_nonfinite <- function(x, label) {
-  bad <- sum(!is.finite(x[!is.na(x)]))
-  if (bad > 0) {
-    stop(sprintf("%s contains %d non-finite non-missing values.", label, bad), call. = FALSE)
-  }
-}
-
 make_progress_ord6 <- function(x) {
   ordered(x, levels = c(5, 0, 1, 2, 3, 4))
 }
@@ -122,7 +98,7 @@ assert_first_event_panel <- function(dat, id_col, event_col) {
 df  <- read.csv(navco13_path)
 d21 <- read.csv(navco21_path)
 
-assert_required_cols(
+rep_assert_columns(
   df,
   c(
     "CAMPAIGN", "LOCATION", "EYEAR", "BYEAR", "success", "limited", "success3",
@@ -131,7 +107,7 @@ assert_required_cols(
   ),
   "df_final.csv"
 )
-assert_required_cols(
+rep_assert_columns(
   d21,
   c(
     "navco21_id", "Year", "CAMPAIGN", "LOCATION", "panel_campaign_id",
@@ -141,8 +117,8 @@ assert_required_cols(
   ),
   "df_navco21_panel.csv"
 )
-assert_unique_keys(df, c("CAMPAIGN", "LOCATION"), "df_final CAMPAIGN-LOCATION")
-assert_unique_keys(d21, c("navco21_id", "Year"), "df_navco21_panel NAVCO 2.1 source-id-Year")
+rep_assert_unique(df, c("CAMPAIGN", "LOCATION"), "df_final CAMPAIGN-LOCATION")
+rep_assert_unique(d21, c("navco21_id", "Year"), "df_navco21_panel NAVCO 2.1 source-id-Year")
 
 ###############################################################################
 # NAVCO 1.3 PREPARATION

@@ -16,6 +16,8 @@ suppressPackageStartupMessages({
   library(geepack)
 })
 
+suffix <- if (Sys.getenv("REPLICATION_SMOKE") == "1") "_smoke" else ""
+
 # C25 is an accepted codestack display artifact. Validate its schema contract and
 # materialize it byte-exactly; optional recomputation never overwrites it.
 c25_ref <- file.path(P$reference, "appendix_tables", "C25_power_final_body.csv")
@@ -26,12 +28,12 @@ expected_c25 <- c("Family", "Main table", "Main-table model label", "Estimator",
 if (!identical(names(c25), expected_c25) || nrow(c25) != 28L || "Source" %in% names(c25)) {
  stop("Accepted C25 violates the schema/order/row-count contract.", call. = FALSE)
 }
-if (!file.copy(c25_ref, file.path(P$appendix_tables, "C25_power_table_body.csv"),
+if (!nzchar(suffix) &&
+    !file.copy(c25_ref, file.path(P$appendix_tables, "C25_power_table_body.csv"),
                overwrite = TRUE, copy.mode = TRUE, copy.date = FALSE)) {
  stop("Could not materialize accepted C25 display.", call. = FALSE)
 }
 
-suffix <- if (Sys.getenv("REPLICATION_SMOKE") == "1") "_smoke" else ""
 expected_rows <- c(34L, 3L, 11L)
 if (!nzchar(suffix)) {
   c26_refs <- file.path(P$reference, "appendix_tables", c(
@@ -70,6 +72,7 @@ if (!nzchar(suffix)) {
   }
 }
 
+if (!nzchar(suffix)) {
 bundle_paths <- file.path(P$cache, c("H1_models.rds", "H3_models.rds"))
 estimate_paths <- file.path(P$estimates, c("H1_curvilinear_results.csv", "H3_results.csv"))
 require_files(c(bundle_paths, estimate_paths))
@@ -134,4 +137,6 @@ ggplot2::ggsave(file.path(P$figures, "Figure_C2.pdf"), p_c2, width = 11, height 
                 units = "in", device = grDevices::cairo_pdf)
 ggplot2::ggsave(file.path(P$figures, "Figure_C2.png"), p_c2, width = 11, height = 9,
                 units = "in", dpi = 300)
-cat("Wrote C25, all three C26 panels, and Appendix Figures C1-C2.\n")
+}
+cat(if (nzchar(suffix)) "Wrote all three C26 smoke panels.\n" else
+      "Wrote C25, all three C26 panels, and Appendix Figures C1-C2.\n")

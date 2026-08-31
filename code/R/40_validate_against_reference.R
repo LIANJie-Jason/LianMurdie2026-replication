@@ -2,7 +2,6 @@ root <- Sys.getenv("REPLICATION_ROOT", unset = "")
 if (!nzchar(root)) stop("REPLICATION_ROOT is not set; launch with run_all.R", call. = FALSE)
 source(file.path(root, "code", "R", "00_setup.R"))
 paths <- init_replication(root)
-profile <- Sys.getenv("REPLICATION_PROFILE", unset = "full")
 run_started <- as.numeric(Sys.getenv("REPLICATION_RUN_STARTED_EPOCH", unset = "0"))
 run_marker <- Sys.getenv("REPLICATION_RUN_MARKER", unset = "")
 rep_assert(length(run_started) == 1L && is.finite(run_started) && run_started > 0,
@@ -22,8 +21,7 @@ reference_checks <- lapply(seq_len(nrow(manifest)), function(index) {
   TRUE
 })
 
-active <- manifest$required_profile == "fast" | (profile == "full" & manifest$required_profile == "full")
-active <- active & manifest$comparison != "inventory"
+active <- manifest$comparison != "inventory"
 targets <- manifest[active, , drop = FALSE]
 
 checks <- lapply(seq_len(nrow(targets)), function(index) {
@@ -156,8 +154,8 @@ rep_assert_columns(display_lineage,
                      "rebuild_detail", "rebuild_mismatches", "rebuild_mismatch_fit_key",
                      "reference_sha256", "output_sha256", "lineage_class", "status"),
                    "accepted display materialization audit")
-expected_display_rows <- if (profile == "full") 32L else 28L
-expected_upstream_rows <- if (profile == "full") 4L else 0L
+expected_display_rows <- 32L
+expected_upstream_rows <- 4L
 independent_rebuilds <- display_lineage$precopy_origin == "independent_table_builder"
 rebuild_nonmatches <- independent_rebuilds & !display_lineage$rebuilt_exact_string_match
 rebuild_mismatch_cells <- sum(vapply(
@@ -211,8 +209,7 @@ checks <- rbind(
                "Accepted C22 display copy has 31 rows with exactly one leading NVH1; the pre-copy builder contract is recorded separately")
 )
 
-if (profile == "full") {
-  c26_diagnostic_outputs <- file.path(paths$diagnostics, c(
+c26_diagnostic_outputs <- file.path(paths$diagnostics, c(
     "inference_diagnostics_cox_ph_table_body.csv",
     "inference_diagnostics_cox_power_quarantine_table_body.csv",
     "inference_diagnostics_weibull_table_body.csv"
@@ -292,13 +289,12 @@ if (profile == "full") {
                  is_fresh(materialization_path), materialization_contract,
                  "11 authoritative accepted stochastic artifacts were copied byte-exactly with explicit lineage")
   )
-}
 report_path <- file.path(paths$audit, "reference_validation.csv")
 write.csv(checks, report_path, row.names = FALSE, na = "")
 
 all_passed <- nrow(checks) > 0 && all(checks$passed | !checks$blocking)
-final_status <- if (!all_passed) "FAIL" else if (profile == "full") "PASS" else "INCOMPLETE"
-summary <- data.frame(profile = profile, checked = nrow(checks), passed = sum(checks$passed),
+final_status <- if (all_passed) "PASS" else "FAIL"
+summary <- data.frame(profile = "full", checked = nrow(checks), passed = sum(checks$passed),
                       failed = sum(!checks$passed), blocking_failed = sum(!checks$passed & checks$blocking),
                       advisory_failed = sum(!checks$passed & !checks$blocking), final_status = final_status,
                       stringsAsFactors = FALSE)

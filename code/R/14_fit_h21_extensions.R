@@ -73,20 +73,10 @@ limited_out_path <- file.path(P$estimates, "H21_limited_success_results.csv")
 cache_path   <- file.path(P$cache, "H21_extensions_models.rds")
 convergence_path <- file.path(P$diagnostics, "H21_extensions_logistf_convergence.csv")
 
-assert_required_cols <- function(dat, required_cols, label) {
-  missing_cols <- setdiff(required_cols, names(dat))
-  if (length(missing_cols) > 0) {
-    stop(
-      sprintf("%s is missing required columns: %s", label, paste(missing_cols, collapse = ", ")),
-      call. = FALSE
-    )
-  }
-}
-
 df  <- read.csv(navco13_path)
 d21 <- read.csv(navco21_path)
 
-assert_required_cols(
+rep_assert_columns(
   df,
   c(
     "EYEAR", "BYEAR", "success", "limited", "success3",
@@ -96,7 +86,7 @@ assert_required_cols(
   ),
   "df_final.csv"
 )
-assert_required_cols(
+rep_assert_columns(
   d21,
   c(
     "navco21_id", "Year", "panel_campaign_id", "nonviolent",

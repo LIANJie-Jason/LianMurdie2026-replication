@@ -12,10 +12,9 @@ paths <- init_replication(root)
 setwd(paths$root)
 
 args <- commandArgs(trailingOnly = TRUE)
-profile_arg <- grep("^--profile=", args, value = TRUE)
-profile <- if (length(profile_arg)) sub("^--profile=", "", profile_arg[[1L]]) else if (length(args) && args[[1L]] %in% c("full", "fast")) args[[1L]] else "full"
-rep_assert(profile %in% c("full", "fast"), "Unknown profile '%s'; use full or fast", profile)
-
+rep_assert(!length(args) ||
+             (length(args) == 1L && args[[1L]] %in% c("full", "--profile=full")),
+           "This package has one authoritative run; use --profile=full")
 Sys.unsetenv(c("REPLICATION_SMOKE", "POWER_REPS", "BOOT_REPS"))
 
 run_started <- Sys.time()
@@ -87,7 +86,6 @@ marker_epoch <- as.numeric(file.info(marker_path)$mtime)
 rep_assert(is.finite(marker_epoch), "Could not create the run marker")
 Sys.setenv(
   REPLICATION_ROOT = paths$root,
-  REPLICATION_PROFILE = profile,
   REPLICATION_RUN_ID = run_id,
   REPLICATION_RUN_STARTED_EPOCH = sprintf("%.9f", marker_epoch),
   REPLICATION_RUN_MARKER = marker_path
@@ -95,7 +93,7 @@ Sys.setenv(
 
 context <- data.frame(
   run_id = run_id,
-  profile = profile,
+  profile = "full",
   started_utc = format(run_started, "%Y-%m-%dT%H:%M:%SZ", tz = "UTC"),
   r_version = as.character(getRversion()),
   platform = R.version$platform,
@@ -103,9 +101,9 @@ context <- data.frame(
 )
 write.csv(context, file.path(paths$audit, "run_context.csv"), row.names = FALSE, na = "")
 
-registry <- rep_script_registry(profile)
+registry <- rep_script_registry()
 execution_status <- tryCatch({
-  for (script in registry$script) {
+  for (script in registry) {
     message(sprintf("[%s] running %s", format(Sys.time(), "%H:%M:%S"), script))
     rep_run_script(script, paths, log_dir)
   }
@@ -120,10 +118,8 @@ finished <- Sys.time()
 pipeline_status <- transform(context,
   finished_utc = format(finished, "%Y-%m-%dT%H:%M:%SZ", tz = "UTC"),
   elapsed_seconds = as.numeric(difftime(finished, run_started, units = "secs")),
-  status = if (identical(execution_status, "FAIL")) "FAIL" else
-    if (profile == "full") "PASS" else "INCOMPLETE"
+  status = execution_status
 )
 write.csv(pipeline_status, file.path(paths$audit, "pipeline_status.csv"), row.names = FALSE, na = "")
 if (!identical(execution_status, "PASS")) quit(save = "no", status = 1L)
-message(sprintf("Replication pipeline completed: profile=%s, status=%s", profile,
-                if (profile == "full") "PASS" else "INCOMPLETE (fast profile is not publication validation)"))
+message("Replication pipeline completed: profile=full, status=PASS")

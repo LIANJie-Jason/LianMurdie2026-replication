@@ -113,26 +113,9 @@ out_path     <- file.path(P$estimates, "H21_results.csv")
 cache_path   <- file.path(P$cache, "H21_models.rds")
 frames_path  <- file.path(P$cache, "H21_analysis_frames.rds")
 
-assert_required_cols <- function(dat, required_cols, label) {
-  missing_cols <- setdiff(required_cols, names(dat))
-  if (length(missing_cols) > 0) {
-    stop(
-      sprintf("%s is missing required columns: %s", label, paste(missing_cols, collapse = ", ")),
-      call. = FALSE
-    )
-  }
-}
-
-assert_unique_keys <- function(dat, keys, label) {
-  dupes <- dat[duplicated(dat[keys]) | duplicated(dat[keys], fromLast = TRUE), keys, drop = FALSE]
-  if (nrow(dupes) > 0) {
-    stop(sprintf("Duplicate %s keys detected.", label), call. = FALSE)
-  }
-}
-
 df  <- read.csv(navco13_path)
 d21 <- read.csv(navco21_path)
-assert_required_cols(
+rep_assert_columns(
   df,
   c(
     "EYEAR", "BYEAR", "success", "limited", "success3", "viol", "nonviolent_camp", "REGCHANGE",
@@ -141,7 +124,7 @@ assert_required_cols(
   ),
   "df_final.csv"
 )
-assert_required_cols(
+rep_assert_columns(
   d21,
   c(
     "CAMPAIGN", "LOCATION", "Year", "panel_campaign_id", "nonviolent",
@@ -150,8 +133,8 @@ assert_required_cols(
   ),
   "df_navco21_panel.csv"
 )
-assert_unique_keys(df, c("CAMPAIGN", "LOCATION"), "df_final CAMPAIGN-LOCATION")
-assert_unique_keys(d21, c("navco21_id", "Year"), "df_navco21_panel NAVCO 2.1 source-id-Year")
+rep_assert_unique(df, c("CAMPAIGN", "LOCATION"), "df_final CAMPAIGN-LOCATION")
+rep_assert_unique(d21, c("navco21_id", "Year"), "df_navco21_panel NAVCO 2.1 source-id-Year")
 
 ###############################################################################
 # NAVCO 1.3 PREPARATION

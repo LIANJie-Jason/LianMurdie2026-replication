@@ -225,9 +225,3 @@ write_body <- function(x, path, expected_rows) {
   message(sprintf("Wrote %s (%d rows)", path, nrow(x)))
   invisible(path)
 }
-
-assert_exact_ids <- function(x, ids, column = "model") {
-  got <- as.character(x[[column]])
-  if (!identical(got, ids)) stop(sprintf("Unexpected %s order: %s", column, paste(got, collapse = ", ")), call. = FALSE)
-  invisible(TRUE)
-}

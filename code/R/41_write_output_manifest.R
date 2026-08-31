@@ -2,7 +2,6 @@ root <- Sys.getenv("REPLICATION_ROOT", unset = "")
 if (!nzchar(root)) stop("REPLICATION_ROOT is not set; launch with run_all.R", call. = FALSE)
 source(file.path(root, "code", "R", "00_setup.R"))
 paths <- init_replication(root)
-profile <- Sys.getenv("REPLICATION_PROFILE", unset = "full")
 run_started <- as.numeric(Sys.getenv("REPLICATION_RUN_STARTED_EPOCH", unset = "0"))
 
 # Finder/Dropbox may create metadata while the pipeline is running. These files
@@ -46,7 +45,7 @@ code_manifest <- data.frame(
 write.csv(code_manifest, file.path(paths$audit, "code_manifest.csv"),
           row.names = FALSE, na = "")
 
-expected <- rep_active_output_registry(paths, profile)
+expected <- rep_active_output_registry(paths)
 expected_paths <- file.path(paths$root, expected)
 exists <- file.exists(expected_paths)
 fresh <- exists & as.numeric(file.info(expected_paths)$mtime) >= run_started
@@ -76,7 +75,7 @@ manifest <- data.frame(
   modified_utc = vapply(file.info(files)$mtime, format, character(1), format = "%Y-%m-%dT%H:%M:%SZ", tz = "UTC"),
   produced_this_run = as.numeric(file.info(files)$mtime) >= run_started,
   run_id = Sys.getenv("REPLICATION_RUN_ID", unset = "manual"),
-  profile = profile,
+  profile = "full",
   stringsAsFactors = FALSE
 )
 rep_assert(all(manifest$produced_this_run), "Output manifest contains stale artifacts")

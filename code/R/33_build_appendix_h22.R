@@ -2,13 +2,13 @@
 .root<-Sys.getenv("REPLICATION_ROOT",unset="");if(!nzchar(.root)){.a<-grep("^--file=",commandArgs(FALSE),value=TRUE);.root<-file.path(dirname(normalizePath(sub("^--file=","",.a[1]))),"..","..")};source(file.path(.root,"code","R","_table_helpers.R"));P<-replication_bootstrap();source(file.path(P$code,"_robustness_helpers.R"))
 suppressPackageStartupMessages({library(survival);library(logistf)});spec<-function(n)file.path(P$code,"specs","appendix",n);out<-function(n)file.path(P$appendix_tables,n)
 m<-read_models(P,"H22");s<-read.csv(file.path(P$estimates,"H22_results.csv"))
-emit<-function(name,ids,n)write_body(hydrate_scaffold(spec(name),m[ids],s),out(name),n)
+emit<-function(name,ids,n,scaffold=name)write_body(hydrate_scaffold(spec(scaffold),m[ids],s),out(name),n)
 emit("H22_concession_campaign_table_body.csv",c("M1","M5","M2","M6","M3","M7","M4","M8"),34L)
-emit("H22_strict_success_campaign_table_body.csv",c("M1s","M5s","M2s","M6s","M3s","M7s","M4s","M8s"),34L)
+emit("H22_strict_success_campaign_table_body.csv",c("M1s","M5s","M2s","M6s","M3s","M7s","M4s","M8s"),34L,"H22_concession_campaign_table_body.csv")
 emit("H22_concession_campaign_year_table_body.csv",c("M13","M17","M14","M18","M15","M19","M16","M20"),34L)
-emit("H22_strict_success_campaign_year_table_body.csv",c("M13s","M17s","M14s","M18s","M15s","M19s","M16s","M20s"),34L)
+emit("H22_strict_success_campaign_year_table_body.csv",c("M13s","M17s","M14s","M18s","M15s","M19s","M16s","M20s"),34L,"H22_concession_campaign_year_table_body.csv")
 emit("H22_rest_ordered_table_body.csv",c("M9","M21","M10","M22","M11","M23","M12","M24"),34L)
-emit("H22_rest_robustness_table_body.csv",c("M13_AG","M17_GEE","M14_AG","M18_GEE","M15_AG","M19_GEE","M16_AG","M20_GEE"),34L)
+emit("H22_rest_robustness_table_body.csv",c("M13_AG","M17_GEE","M14_AG","M18_GEE","M15_AG","M19_GEE","M16_AG","M20_GEE"),34L,"H22_concession_campaign_year_table_body.csv")
 
 D<-prepare_robustness_data(P);df<-D$df;d21<-D$d21;df$duration<-df$EYEAR-df$BYEAR+1;df$event_concession<-df$concession_bin;d21$tstart<-d21$time_in_campaign-1;d21$tstop<-d21$time_in_campaign;d21$event_concession<-d21$concession_bin
 d21_first<-d21[order(d21$navco21_id,d21$time_in_campaign),];d21_first<-d21_first|>dplyr::group_by(navco21_id)|>dplyr::mutate(.cum=cumsum(event_concession),.prior=dplyr::lag(.cum,default=0L))|>dplyr::filter(.prior==0L)|>dplyr::mutate(event_concession=as.integer(event_concession==1&.cum==1L))|>dplyr::ungroup()

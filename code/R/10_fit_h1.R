@@ -89,29 +89,12 @@ out_path     <- file.path(P$estimates, "H1_curvilinear_results.csv")
 cache_path   <- file.path(P$cache, "H1_models.rds")
 frames_path  <- file.path(P$cache, "H1_analysis_frames.rds")
 
-assert_required_cols <- function(dat, required_cols, label) {
-  missing_cols <- setdiff(required_cols, names(dat))
-  if (length(missing_cols) > 0) {
-    stop(
-      sprintf("%s is missing required columns: %s", label, paste(missing_cols, collapse = ", ")),
-      call. = FALSE
-    )
-  }
-}
-
-assert_unique_keys <- function(dat, keys, label) {
-  dupes <- dat[duplicated(dat[keys]) | duplicated(dat[keys], fromLast = TRUE), keys, drop = FALSE]
-  if (nrow(dupes) > 0) {
-    stop(sprintf("Duplicate %s keys detected.", label), call. = FALSE)
-  }
-}
-
 ###############################################################################
 # NAVCO 1.3 PREPARATION
 ###############################################################################
 
 df <- read.csv(navco13_path)
-assert_required_cols(
+rep_assert_columns(
   df,
   c(
     "EYEAR", "BYEAR", "success", "limited", "success3", "viol", "nonviolent_camp", "REGCHANGE",
@@ -146,7 +129,7 @@ df$success_bin       <- df$event_success
 ###############################################################################
 
 d21 <- read.csv(navco21_path)
-assert_required_cols(
+rep_assert_columns(
   d21,
   c(
     "CAMPAIGN", "LOCATION", "Year", "panel_campaign_id", "nonviolent",
@@ -156,7 +139,7 @@ assert_required_cols(
   ),
   "df_navco21_panel.csv"
 )
-assert_unique_keys(d21, c("navco21_id", "Year"), "df_navco21_panel NAVCO 2.1 source-id-Year")
+rep_assert_unique(d21, c("navco21_id", "Year"), "df_navco21_panel NAVCO 2.1 source-id-Year")
 
 d21$nonviolent        <- as.factor(d21$nonviolent)   # prim_meth: 1=nonviolent
 d21$colonized_english <- as.factor(d21$colonized_english)

@@ -3,17 +3,6 @@
 # unless a caller explicitly asks for a comparison. Fresh estimates always go
 # to output/; accepted evidence remains immutable under reference/accepted/.
 
-resolve_replication_root <- function() {
-  env_root <- Sys.getenv("REPLICATION_ROOT", unset = "")
-  if (nzchar(env_root)) return(normalizePath(env_root, mustWork = TRUE))
-  file_arg <- grep("^--file=", commandArgs(trailingOnly = FALSE), value = TRUE)
-  if (length(file_arg) != 1L) {
-    stop("Set REPLICATION_ROOT when sourcing a replication script interactively.", call. = FALSE)
-  }
-  script <- normalizePath(sub("^--file=", "", file_arg), mustWork = TRUE)
-  normalizePath(file.path(dirname(script), "..", ".."), mustWork = TRUE)
-}
-
 read_positive_integer <- function(name, default) {
   raw <- Sys.getenv(name, unset = "")
   if (!nzchar(raw)) return(as.integer(default))
@@ -435,36 +424,6 @@ typical_value <- function(x) {
   values <- unique(stats::na.omit(x))
   if (length(values) <= 2L && all(values %in% c(0, 1))) return(as.numeric(mean(x, na.rm = TRUE) >= .5))
   mean(x, na.rm = TRUE)
-}
-
-prediction_grid <- function(model, x_name, moderator = NULL, grid_n = 80L) {
-  data <- model_simulation_data(model)
-  x <- data[[x_name]]
-  x_grid <- seq(min(x, na.rm = TRUE), max(x, na.rm = TRUE), length.out = grid_n)
-  rhs_vars <- all.vars(delete.response(terms(rep_model_formula(model))))
-  base_vars <- setdiff(rhs_vars, c(x_name, moderator))
-  base <- as.data.frame(lapply(data[base_vars], typical_value), stringsAsFactors = FALSE)
-  levels <- if (is.null(moderator)) NA_real_ else
-    as.numeric(stats::quantile(data[[moderator]], c(.10, .50, .90), na.rm = TRUE))
-  do.call(rbind, lapply(levels, function(level) {
-    nd <- base[rep(1L, grid_n), , drop = FALSE]
-    nd[[x_name]] <- x_grid
-    if (!is.null(moderator)) nd[[moderator]] <- level
-    X <- aligned_model_matrix(model, nd)
-    beta <- coef(model)
-    if (inherits(model, "survreg")) {
-      fit <- exp(drop(X %*% beta)) * log(2)^model$scale
-      response_scale <- "Predicted median duration"
-    } else if (inherits(model, "logistf")) {
-      fit <- stats::plogis(drop(X %*% beta))
-      response_scale <- "Predicted probability"
-    } else {
-      fit <- exp(drop(X %*% beta))
-      response_scale <- "Relative hazard"
-    }
-    data.frame(x = x_grid, moderator_level = level, fit = fit,
-               response_scale = response_scale, stringsAsFactors = FALSE)
-  }))
 }
 
 wald_forest_row <- function(model, term) {

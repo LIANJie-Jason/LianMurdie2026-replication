@@ -7,5 +7,5 @@ write_body(hydrate_scaffold(spec("H1_sensitivity_appendix_table_body.csv"),h1[c(
 h21<-read_models(P,"H21");ext<-read_models(P,"H21_extensions");h21s<-read.csv(file.path(P$estimates,"H21_results.csv"));qs<-read.csv(file.path(P$estimates,"H21_curvilinear_appendix_results.csv"));ls<-read.csv(file.path(P$estimates,"H21_limited_success_results.csv"))
 write_body(hydrate_scaffold(spec("H21_curvi_appendix_table_body.csv"),ext[c("M1q","M2q","M3q","M4q","M7q","M8q","M9q","M10q")],qs),out("H21_curvi_appendix_table_body.csv"),35L)
 write_body(hydrate_scaffold(spec("H21_strict_success_table_body.csv"),h21[c("M1s","M2s","M3s","M4s","M7s","M8s","M9s","M10s")],h21s),out("H21_strict_success_table_body.csv"),29L)
-write_body(hydrate_scaffold(spec("H21_limited_success_table_body.csv"),ext[c("M1l","M2l","M3l","M4l","M7l","M8l","M9l","M10l")],ls),out("H21_limited_success_table_body.csv"),29L)
+write_body(hydrate_scaffold(spec("H21_strict_success_table_body.csv"),ext[c("M1l","M2l","M3l","M4l","M7l","M8l","M9l","M10l")],ls),out("H21_limited_success_table_body.csv"),29L)
 write_body(hydrate_scaffold(spec("H21_rest_appendix_table_body.csv"),h21[c("M5","M6","M11","M12","M7_AG","M8_AG","M9_GEE","M10_GEE")],h21s),out("H21_rest_appendix_table_body.csv"),29L)

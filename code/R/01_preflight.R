@@ -2,7 +2,6 @@ root <- Sys.getenv("REPLICATION_ROOT", unset = "")
 if (!nzchar(root)) stop("REPLICATION_ROOT is not set; launch with run_all.R", call. = FALSE)
 source(file.path(root, "code", "R", "00_setup.R"))
 paths <- init_replication(root)
-profile <- Sys.getenv("REPLICATION_PROFILE", unset = "full")
 
 rep_assert(getRversion() >= "4.3.0", "R >= 4.3.0 is required; found %s", getRversion())
 rep_assert(rep_command_exists("shasum") || rep_command_exists("sha256sum"),
@@ -20,8 +19,8 @@ too_old <- vapply(seq_len(nrow(requirements)), function(index) {
 }, logical(1))
 rep_assert(!any(too_old), "Packages below minimum version: %s", paste(requirements$package[too_old], collapse = ", "))
 
-registry <- rep_script_registry(profile)
-missing_scripts <- registry$script[!file.exists(file.path(paths$code, registry$script))]
+registry <- rep_script_registry()
+missing_scripts <- registry[!file.exists(file.path(paths$code, registry))]
 rep_assert(!length(missing_scripts), "Pipeline scripts are missing: %s", paste(missing_scripts, collapse = ", "))
 
 portable_r <- c(
@@ -58,4 +57,4 @@ versions <- data.frame(
   stringsAsFactors = FALSE
 )
 write.csv(versions, file.path(paths$audit, "runtime_versions.csv"), row.names = FALSE, na = "")
-cat(sprintf("Preflight passed: profile=%s; R=%s; packages=%d\n", profile, getRversion(), nrow(requirements)))
+cat(sprintf("Preflight passed: profile=full; R=%s; packages=%d\n", getRversion(), nrow(requirements)))
