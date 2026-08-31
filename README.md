@@ -47,7 +47,6 @@ been validated.
 | [`reference/accepted/`](reference/accepted/) | Frozen numerical references from the accepted analysis |
 | [`output/`](output/) | Estimates, reader-facing tables, figures, and diagnostics |
 | [`publication_figures/`](publication_figures/) | Reader-facing article and appendix plot gallery |
-| [`audit/`](audit/) | Validation summaries and software information from the verified run |
 | [`docs/`](docs/) | Detailed specification and exhibit mapping for technical review |
 
 The analysis begins with three supplied files:
@@ -88,12 +87,9 @@ independent validation evidence.
 
 ## Validation and interpretation
 
-The verified full run completed successfully; see the [validation
-summary](audit/validation_summary.csv) and [run
-status](audit/pipeline_status.csv). Some accepted models show convergence or
-monotone-likelihood warnings in a post-acceptance audit. Their published values
-are preserved for fidelity and identified in the [detailed fit
-notes](output/diagnostics/accepted_fit_status_all.csv).
+Some accepted models show convergence or monotone-likelihood warnings in a
+post-acceptance check. Their published values are preserved for fidelity and
+identified in the [detailed fit notes](output/diagnostics/accepted_fit_status_all.csv).
 
 Accepted power and bootstrap summaries come from verified archived results;
 optional recomputation scripts are available but cannot replace those outputs.

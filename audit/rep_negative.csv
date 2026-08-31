@@ -1,6 +1,0 @@
-"check_id","passed","detail"
-"deleted_identification_absent",TRUE,"deleted identification artifacts absent"
-"no_stale_h3_movement_slot",TRUE,"H3 main panel is exactly repression/civil-liberty/political-liberty/Polity"
-"no_h21_k6_k14_logic",TRUE,"H2.1 uses exactly k=8 main and k=12 appendix multiplicity families"
-"c22_nvh1_contract",TRUE,"Accepted C22 requires 31 rows with exactly one leading NVH1 row; deletion mutant rejected"
-"c25_column_contract",TRUE,"Accepted C25 requires 28 rows, power before false-positive rate, and no Source column; Source mutant rejected"

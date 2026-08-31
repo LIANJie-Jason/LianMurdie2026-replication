@@ -1,4 +1,0 @@
-"file","rows","columns","sha256","shape_ok","schema_ok","key_unique"
-"df_final.csv",101,66,"e43ec4118c7594788a62d0ec2d486d242e2706a10d1c4a68acbfc13b81f95764",TRUE,TRUE,TRUE
-"df_navco21_panel.csv",65,79,"69d98f424d1c714c7bc899c71efee48740976a7d6478f65d43bc3269d0ab26b2",TRUE,TRUE,TRUE
-"h3_additional_moderators.csv",101,6,"0076a9587509633c96c9540c7a7bd8cbd3fac62c9a52a3ecb0a69f0dc35979d0",TRUE,TRUE,TRUE
