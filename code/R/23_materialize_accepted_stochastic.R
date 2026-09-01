@@ -12,8 +12,8 @@ rep_assert_file(contract_path, "Accepted stochastic-artifact lineage")
 contract <- read.csv(contract_path, stringsAsFactors = FALSE, check.names = FALSE)
 rep_assert_columns(
   contract,
-  c("artifact", "reference_path", "sha256", "authoritative_source_relative_to_project",
-    "producer_script_relative_to_project", "producer_sha256", "lineage_class"),
+  c("artifact", "reference_path", "sha256", "producer_path", "producer_sha256",
+    "accepted_producer_sha256", "lineage_class"),
   "accepted stochastic-artifact lineage"
 )
 rep_assert(nrow(contract) == 11L, "Accepted stochastic lineage must contain 11 artifacts")

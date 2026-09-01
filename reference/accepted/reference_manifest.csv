@@ -70,4 +70,4 @@
 "reference/accepted/provenance/derived_numeric_references.csv","","d81dca5442b88d28798b25e23a2d08f1d58a847e690847ab48230a5f245ca2ff","inventory",0,0,"explicit frozen_derived_reference lineage contract"
 "reference/accepted/exhibit_manifest.csv","","3aefb7665459a616d0ddebb405003760b7a9546a26b5fc3d61a8e4d18807470e","inventory",0,0,"hash-frozen accepted exhibit coverage contract"
 "reference/accepted/provenance/power_seed_lineage.csv","","58edc1e87d9d14fc42a1e4c2c5f9bfce793591cfc7d89a5ae1211cfcbff319b0","inventory",0,0,"accepted-versus-fresh Monte Carlo seed relationship"
-"reference/accepted/provenance/accepted_stochastic_artifacts.csv","","9a5ec9a45c4f09654a7902dde9db53e48b00b7521d23337583f691756515c9be","inventory",0,0,"verified accepted-codestack stochastic artifact lineage"
+"reference/accepted/provenance/accepted_stochastic_artifacts.csv","","8cfeb6f1fb568ac1233449fe5abe118fb42640d0e6340e2efb66132bc1933b11","inventory",0,0,"verified accepted-codestack stochastic artifact lineage"

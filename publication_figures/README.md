@@ -1,64 +1,67 @@
 # Publication plot gallery
 
-This gallery collects the analytical plots appearing in the accepted article
-and full online appendix. It deliberately excludes the article's conceptual
-workflow diagram and all photo or prediction montages. Raw protest photographs
-are not redistributed in this repository.
-
-The accepted Word article stores Figure 1 in a format GitHub cannot display.
-The version shown here is an author-generated web rendering from the frozen
-[`data/df_final.csv`](../data/df_final.csv) input; all eleven yearly bar counts
-match the accepted figure. Figures 2, 5, and 6 and Appendix Figures B1–B3 and
-C1–C2 are the images embedded in the accepted Word files. A simple
-[figure list](figure_list.csv) identifies each file and distinguishes accepted
-images from reproduced versions.
+This gallery collects the plots appearing in the final-format article and its
+appendices. The workflow diagram and prediction montage are maintained with the
+[protest-sign detector](https://github.com/LIANJie-Jason/Protest-Sign-Detector)
+because that repository documents the complete image-processing workflow and
+the source-media rights. A simple [figure list](figure_list.csv) identifies each
+local or linked file and distinguishes accepted images from reproduced versions.
+Appendix Figures B4 and B5 remain visible in the appendix PDFs but are not
+published as separate gallery files because they contain third-party protest
+photographs and identifiable people.
 
 ## Main article
 
-### Figure 1: Campaigns in NAVCO 1.3 in Non-English-Speaking Countries
+### Figure 1: Protest Banner Photos of Campaigns in NAVCO 1.3 in Non-English-Speaking Countries
 
 ![Figure 1](article/Figure_1.png)
 
-### Figure 2: Protest Banner Photos of Campaigns in NAVCO 1.3 in Non-English-Speaking Countries (yearly photo-count plot)
+### Figure 2: Working Pipeline: Extracting English-language Protest Sign
 
-This is the article's aggregate plot of collected-photo counts by year; it
-contains no protest photographs.
+[View the exact workflow figure in the detector repository](https://github.com/LIANJie-Jason/Protest-Sign-Detector/blob/main/image/README/workflow.png).
 
-![Figure 2](article/Figure_2.png)
+### Figure 3: Sample Reduction Results – Testing Images
 
-### Figure 5: Distribution of the Proportion of English-language Protest Signs in Campaigns in Non-English-Speaking Countries, 2009-2019
+[View the exact prediction montage in the detector repository](https://github.com/LIANJie-Jason/Protest-Sign-Detector/blob/main/image/README/val.jpeg).
+
+### Figure 4: Distribution of the Proportion of English-language Protest Signs in Campaigns in Non-English-Speaking Countries, 2009-2019
+
+![Figure 4](article/Figure_4.png)
+
+### Figure 5: Scattershot of the Proportion of English-language Protest Signs in Campaigns in Non-English-Speaking Countries, 2009-2019
 
 ![Figure 5](article/Figure_5.png)
 
-### Figure 6: Scattershot of the Proportion of English-language Protest Signs in Campaigns in Non-English-Speaking Countries, 2009-2019
+Figures 6–8 below are reproduced by the one-command analysis; each is paired
+with its PDF and plot data. Their output filenames retain the pre-formatting
+identifiers `Figure_7`–`Figure_9` so the validated analysis contract remains
+stable.
 
-![Figure 6](article/Figure_6.png)
+### Figure 6: The Curvilinear Effects of Proportion of English-Language Signs During Campaign
 
-Figures 7–9 below are reproduced by the one-command analysis; each is paired
-with its PDF and plot data.
-
-### Figure 7: The Curvilinear Effects of Proportion of English-Language Signs During Campaign
-
-![Figure 7](../output/figures/Figure_7.png)
+![Figure 6](../output/figures/Figure_7.png)
 
 [PDF](../output/figures/Figure_7.pdf) ·
 [plot data](../output/figures/Figure_7_plot_data.csv)
 
-### Figure 8: International Trade Freedom X Proportion of English-Language Signs During Campaign
+### Figure 7: International Trade Freedom X Proportion of English-Language Signs During Campaign
 
-![Figure 8](../output/figures/Figure_8.png)
+![Figure 7](../output/figures/Figure_8.png)
 
 [PDF](../output/figures/Figure_8.pdf) ·
 [plot data](../output/figures/Figure_8_plot_data.csv)
 
-### Figure 9: Vulnerability to Domestic Pressure X Proportion of English-Language Signs During Campaign
+### Figure 8: Vulnerability to Domestic Pressure X Proportion of English-Language Signs During Campaign
 
-![Figure 9](../output/figures/Figure_9.png)
+![Figure 8](../output/figures/Figure_9.png)
 
 [PDF](../output/figures/Figure_9.pdf) ·
 [plot data](../output/figures/Figure_9_plot_data.csv)
 
-## Full online appendix
+## Appendices
+
+The 25-page JCR supplement contains no separately numbered Appendix C figures;
+Figures C1 and C2 below belong to the full replication appendix.
 
 ### Figure B1: Training results
 
@@ -97,7 +100,7 @@ of the reproduced versions. Both are retained: the accepted images show what
 readers see in the appendix, while the reproduced figures and data files
 document computational reproduction.
 
-The authors have approved public distribution of this replication package.
+The authors have approved distribution of the gallery materials they control.
 The accepted appendix and publication-figure images are provided at no charge
 for non-commercial, no-derivatives use with citation of the accepted article,
 consistent with [Sage's author archiving and re-use guidelines](https://www.sagepub.com/journals/permissions/sages-author-archiving-and-re-use-guidelines).

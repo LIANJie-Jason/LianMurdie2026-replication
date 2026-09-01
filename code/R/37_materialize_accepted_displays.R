@@ -93,5 +93,5 @@ rep_assert(all(lineage$status == "PASS"), "Accepted display materialization fail
 expected_rows <- 32L
 rep_assert(nrow(lineage) == expected_rows,
            "Display materialization expected %d rows, found %d", expected_rows, nrow(lineage))
-cat(sprintf("Materialized %d accepted table displays byte-exactly after numerical rebuilding.\n",
-            nrow(lineage)))
+cat(sprintf(paste0("Materialized %d accepted table displays after 28 independent builder checks; ",
+                   "four accepted-source components are validated separately.\n"), nrow(lineage)))

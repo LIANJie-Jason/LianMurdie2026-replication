@@ -218,42 +218,30 @@ stochastic_path <- file.path(paths$reference, "provenance", "accepted_stochastic
 stochastic <- if (file.exists(stochastic_path)) {
   read.csv(stochastic_path, stringsAsFactors = FALSE, check.names = FALSE)
 } else data.frame()
-stochastic_required <- c("artifact", "reference_path", "sha256",
-                         "authoritative_source_relative_to_project",
-                         "producer_script_relative_to_project", "producer_sha256",
-                         "lineage_class")
+stochastic_required <- c("artifact", "reference_path", "sha256", "producer_path",
+                         "producer_sha256", "accepted_producer_sha256", "lineage_class")
 stochastic_ids <- c(
   "power_h1.csv", "power_h1_summary.csv", "power_h21.csv", "power_h21_summary.csv",
   "power_h22.csv", "power_h22_summary.csv", "power_h3.csv", "power_h3_summary.csv",
   "weibull_bootstrap_calibration.csv", "weibull_power_diagnostic_audit.csv",
   "cox_power_quarantine_audit.csv"
 )
-project_root <- dirname(dirname(paths$root))
-stochastic_source_paths <- file.path(project_root,
-                                     stochastic$authoritative_source_relative_to_project)
-stochastic_producer_paths <- file.path(project_root,
-                                       stochastic$producer_script_relative_to_project)
-source_present <- file.exists(stochastic_source_paths)
-producer_present <- file.exists(stochastic_producer_paths)
+stochastic_producer_paths <- file.path(paths$root, stochastic$producer_path)
 stochastic_ok <- all(stochastic_required %in% names(stochastic)) &&
   identical(as.character(stochastic$artifact), stochastic_ids) &&
   all(stochastic$lineage_class == "accepted_codestack_copy") &&
+  all(grepl("^[0-9a-f]{64}$", stochastic$accepted_producer_sha256)) &&
   all(vapply(seq_len(nrow(stochastic)), function(index) {
     reference <- file.path(paths$root, stochastic$reference_path[[index]])
-    source <- stochastic_source_paths[[index]]
     producer <- stochastic_producer_paths[[index]]
     reference_ok <- file.exists(reference) &&
       identical(rep_sha256_file(reference), stochastic$sha256[[index]])
-    source_ok <- !file.exists(source) ||
-      identical(rep_sha256_file(source), stochastic$sha256[[index]])
-    producer_ok <- !file.exists(producer) ||
+    producer_ok <- file.exists(producer) &&
       identical(rep_sha256_file(producer), stochastic$producer_sha256[[index]])
-    reference_ok && source_ok && producer_ok
+    reference_ok && producer_ok
   }, logical(1)))
 record_coverage("accepted_stochastic_codestack", stochastic_ok,
-                sprintf(paste0("11 accepted stochastic reference hashes pass; external codestack ",
-                               "sources present %d/11 and producer scripts present %d/11 (present files hash-match)"),
-                        sum(source_present), sum(producer_present)))
+                "11 accepted stochastic references and their archived producer scripts hash-match")
 
 seed_registry <- assert_unique_power_seeds()
 record_coverage("unique_rng_streams", !anyDuplicated(seed_registry$seed),

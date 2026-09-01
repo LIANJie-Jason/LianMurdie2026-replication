@@ -2,7 +2,7 @@
 
 ## Scope
 
-This package begins from the two frozen merged analysis files. It does not
+This package begins from three frozen, pre-merged analysis files. It does not
 rebuild the Google Images, CV/NLP, NAVCO, V-Dem, QoG, WDI, AidData, or Polity
 merges. Its purpose is to reproduce every statistical number displayed in the
 accepted main article and Appendix C.
@@ -18,6 +18,7 @@ confidence interval, sample/event count, diagnostics, and plotted values).
 |---|---:|---|
 | `data/df_final.csv` | 101 x 66 | campaign-location |
 | `data/df_navco21_panel.csv` | 65 x 79 | NAVCO 2.1 source-campaign-year |
+| `data/h3_additional_moderators.csv` | 101 x 6 | campaign-location |
 
 Appendix C20 additionally requires the campaign-period mean of V-Dem
 `v2x_frassoc_thick`, which is absent from the accepted `df_final.csv`. The
@@ -32,9 +33,9 @@ that moderator. No live V-Dem download or merge occurs during replication.
 | Table 2 / H2.1 | `M1`, `M2`, `M3`, `M4`, `M7`, `M8`, `M9`, `M10` | `11_fit_h21.R` |
 | Table 3 / H2.2 | `M1/M5`, `M2/M6`, `M3/M7`, `M4/M8` | `12_fit_h22.R` |
 | Table 4 / H3 | `M1/M5`, `M2/M6`, `M3/M7`, `M4/M8` | `13_fit_h3.R` |
-| Figure 7 | H1 `M1` Weibull AFT and `M4` Cox PH | H1 figure builder |
-| Figure 8 | H2.2 trade `M2` Weibull and `M6` Firth | H2.2 figure builder |
-| Figure 9 | H3 `M1/M5` CSO repression and `M3/M7` political liberty | H3 figure builder |
+| Figure 6 (`Figure_7` output) | H1 `M1` Weibull AFT and `M4` Cox PH | H1 figure builder |
+| Figure 7 (`Figure_8` output) | H2.2 trade `M2` Weibull and `M6` Firth | H2.2 figure builder |
+| Figure 8 (`Figure_9` output) | H3 `M1/M5` CSO repression and `M3/M7` political liberty | H3 figure builder |
 
 H1 multiplicity uses a fixed 10-model family. H2.1 uses Holm `k=8` for the
 main panel and BH `k=12` for the core appendix. H2.2 and H3 each use Holm
@@ -75,6 +76,26 @@ robustness rows are outside those families.
 Appendix Figures C1 and C2 are the H1 curvature and H3 interaction forest
 plots. A duplicate identification section from an earlier draft is not part of
 the accepted appendix and is intentionally omitted.
+
+## JCR appendix crosswalk
+
+The 25-page JCR appendix retains twelve selected tables from the full analysis
+appendix and renumbers them as follows:
+
+| JCR appendix | Full appendix |
+|---|---|
+| C1 | C1 |
+| C2 | C2 |
+| C3 | C6 |
+| C4 | C13 |
+| C5 | C14 |
+| C6 | C16 |
+| C7 | C19 |
+| C8 | C20 |
+| C9 | C21 |
+| C10 | C23 |
+| C11 | C25 |
+| C12 | C26 |
 
 ## Expected output sizes
 
